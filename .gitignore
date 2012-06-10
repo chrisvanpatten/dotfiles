@@ -1,0 +1,11 @@
+# No .sass-cache
+.sass-cache
+
+# No ST2 sftp-config
+sftp-config.json
+sftp-config-alt.json
+
+# No folder crap
+.DS_Store*
+ehthumbs.db
+Thumbs.db
