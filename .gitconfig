@@ -1,0 +1,7 @@
+[user]
+	name = Chris Van Patten
+	email = chris@vanpattenmedia.com
+[core]
+	excludesfile = /Users/Chris/Tools/git/gitignore_global
+[alias]
+	submodule-rm = !sh ~/Tools/git/git-submodule-rm.sh
