@@ -1,13 +1,13 @@
 # Paths
 PATH=/Users/Chris/Android/platform-tools:$PATH
-[[ -s "/Users/Chris/.rvm/scripts/rvm" ]] && source "/Users/Chris/.rvm/scripts/rvm"
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
 # Sublime Text 2
 export EDITOR='subl -w'
 
 # Load .bash_colors
-if [ -f ~/dotfiles/.bash_colors ]; then
-	. ~/dotfiles/.bash_colors
+if [ -f ~/dotfiles/bash/.bash_colors ]; then
+	. ~/dotfiles/bash/.bash_colors
 fi
 
 # Load .aliases
