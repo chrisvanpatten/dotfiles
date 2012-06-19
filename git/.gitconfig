@@ -5,6 +5,7 @@
 	excludesfile = ~/.gitignore
 [alias]
 	submodule-rm = !sh ~/Tools/git/git-submodule-rm.sh
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
