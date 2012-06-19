@@ -5,7 +5,7 @@ plugins=(git osx rvm ruby vagrant nyan github cap)
 
 # Paths
 PATH=/Users/Chris/Android/platform-tools:$PATH
-[[ -s "/Users/Chris/.rvm/scripts/rvm" ]] && source "/Users/Chris/.rvm/scripts/rvm"
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
 # Sublime Text 2
 export EDITOR="subl -w"
