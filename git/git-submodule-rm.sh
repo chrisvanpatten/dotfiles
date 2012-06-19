@@ -44,7 +44,7 @@ function is_gitroot() {
 
 # first check if it's a valid path
 if [ ! -d "$1" ]; then
-  echo "Usage: git submodule rm <path>"
+  echo "Usage: git submodule-rm <path>"
   exit
 fi
 
@@ -58,7 +58,7 @@ if is_gitroot; then
     git config -f .git/config --remove-section submodule.${1%/}
     git rm --cached ${1%/}
   else
-    echo "git submodule rm is not recursive yet, aborting."
+    echo "git submodule-rm is not recursive yet, aborting."
   fi
 else
   echo "You need to run this command from the toplevel of the working tree."
