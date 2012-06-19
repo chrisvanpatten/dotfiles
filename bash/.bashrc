@@ -1,5 +1,5 @@
 # Paths
-PATH=/Users/Chris/Android/platform-tools:$PATH
+PATH=~/platform-tools:$PATH
 [[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
 # Sublime Text 2
