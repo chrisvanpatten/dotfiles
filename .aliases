@@ -25,12 +25,6 @@ alias dict="dict -d wn"
 # GPG
 alias gpgo="gpg --symmetric --personal-cipher-preferences "AES256""
 
-# SSH aliases
-alias vpmssh="ssh chris@97.107.141.200"
-alias cruella="ssh chris@97.107.141.200"
-alias pongo="ssh -p 9012 chris@50.116.59.75"
-alias perdita="ssh -p 9982 chris@50.116.59.73"
-
 # Git Aliases
 alias gs="git status"
 alias gp="git push"

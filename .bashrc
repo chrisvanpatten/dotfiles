@@ -6,11 +6,16 @@ PATH=/Users/Chris/Android/platform-tools:$PATH
 export EDITOR='subl -w'
 
 # Load .bash_colors
-if [ -f ~/.bash_colors ]; then
-	. ~/.bash_colors
+if [ -f ~/dotfiles/.bash_colors ]; then
+	. ~/dotfiles/.bash_colors
 fi
 
 # Load .aliases
-if [ -f ~/.aliases ]; then
-	. ~/.aliases
+if [ -f ~/dotfiles/.aliases ]; then
+	. ~/dotfiles/.aliases
+fi
+
+# Load .private
+if [ -f ~/dotfiles/.private ]; then
+	. ~/dotfiles/.private
 fi

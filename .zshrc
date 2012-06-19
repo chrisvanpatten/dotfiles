@@ -11,6 +11,7 @@ PATH=/Users/Chris/Android/platform-tools:$PATH
 export EDITOR="subl -w"
 
 # Include .bash_aliases (maximum compatibility)
-source ~/.aliases
+source ~/dotfiles/.aliases
+source ~/dotfiles/.private
 
 source $ZSH/oh-my-zsh.sh
