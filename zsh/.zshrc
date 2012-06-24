@@ -2,6 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="sunrise"
 plugins=(git osx rvm ruby vagrant nyan github cap)
+DISABLE_AUTO_UPDATE=true
 
 # Paths
 PATH=/Users/Chris/Android/platform-tools:$PATH
