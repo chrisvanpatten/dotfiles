@@ -33,3 +33,6 @@ alias gk="git commit"
 alias gak="ga -A && gk"
 alias glog="git lg"
 alias glo="git lg"
+
+# RWD thumbnail generator for VanPattenMedia.com
+alias "vpmrwd"="~/dotfiles/scripts/generate-rwd.sh"
