@@ -36,3 +36,6 @@ alias glo="git lg"
 
 # RWD thumbnail generator for VanPattenMedia.com
 alias "vpmrwd"="~/dotfiles/scripts/generate-rwd.sh"
+
+# Random
+alias magic="bundle exec guard"
