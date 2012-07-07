@@ -1,15 +1,20 @@
 termcapinfo * ti@:te@
 
 # Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+bindkey ^[[1;7C prev
+bindkey ^[[1;7D next
+
 bindkey -k F1 prev
-bindkey -k F2 next
+bindkey -k F2 focus
 
 vbell off
 startup_message off
 
+# Big scrollback
+defscrollback 99999
+
 # autodetach on
 # altscreen on
-# defscrollback 99999
 # defutf8 on
 # utf8 on on
 # nonblock on
