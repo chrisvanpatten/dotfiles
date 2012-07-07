@@ -4,16 +4,19 @@
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# enable color support of grep
-if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
-	eval "`dircolors -b`"
-
-	alias grep='grep --color=auto'
-fi
-
 # ls
 alias ls='ls -CGF'
 alias l='ls -CGF'
+
+# Enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+	alias ls='ls -CGF --color=auto'
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
 
 # More ls
 alias ll='ls -al'
