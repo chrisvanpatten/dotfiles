@@ -18,9 +18,14 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-# More ls
-alias ll='ls -al'
-alias la='ls -A'
+# Sudo (zsh parity)
+alias _='sudo'
+
+# More ls (zsh parity)
+alias lsa='ls -lah'
+alias l='ls -la'
+alias ll='ls -l'
+alias sl=ls # Typo fix
 
 # Dictionary
 alias dict="dict -d wn"
