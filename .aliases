@@ -21,6 +21,14 @@ fi
 # Sudo (zsh parity)
 alias _='sudo'
 
+# Folder traversing (zsh parity)
+alias ..='cd ..'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
+alias cd.....='cd ../../../..'
+alias cd/='cd /'
+
 # More ls (zsh parity)
 alias lsa='ls -lah'
 alias l='ls -la'
