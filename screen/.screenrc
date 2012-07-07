@@ -1,0 +1,28 @@
+termcapinfo * ti@:te@
+
+# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+bindkey -k F1 prev
+bindkey -k F2 next
+
+vbell off
+startup_message off
+autodetach on
+altscreen on
+defscrollback 99999
+defutf8 on
+#utf8 on on
+nonblock on
+#term screen-256color
+
+# # allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# # tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# # erase background with current bg color
+defbce "on"
+
+# Hardstatus
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
