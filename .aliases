@@ -56,4 +56,4 @@ alias "vpmrwd"="~/dotfiles/scripts/generate-rwd.sh"
 alias magic="bundle exec guard"
 
 # Tail for nginx errors
-tail -f /var/log/nginx/error.log | perl -pe 's/\[error\]/\e[1;255;31m$&\e[0m/g'
+alias tail-nginx-errors="tail -f /var/log/nginx/error.log | perl -pe 's/\[error\]/\e[1;255;31m$&\e[0m/g'"
