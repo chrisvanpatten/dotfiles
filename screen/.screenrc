@@ -1,11 +1,14 @@
 termcapinfo * ti@:te@
 
-# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
-bindkey ^[[1;7C prev
-bindkey ^[[1;7D next
+# Navigate regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
 
+# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
 bindkey -k F1 prev
-bindkey -k F2 focus
+bindkey -k F2 next
 
 vbell off
 startup_message off
