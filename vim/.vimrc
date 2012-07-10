@@ -13,3 +13,22 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
+
+" =====================
+" = Behavior Settings =
+" =====================
+set ignorecase
+
+" No junk files
+set nobackup
+set nowritebackup
+set noswapfile
+
+" ===================
+" = Visual Settings =
+" ===================
+syntax enable
+set background=dark
+colorscheme solarized
+set number     " Show line numbers
+set hlsearch   " Highlight search results
