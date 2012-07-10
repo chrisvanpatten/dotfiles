@@ -2,8 +2,8 @@
 PATH=~/platform-tools:$PATH
 [[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
-# Sublime Text 2
-export EDITOR='subl -w'
+# Vim
+export EDITOR='vim'
 
 # Load .bash_colors
 if [ -f ~/dotfiles/bash/.bash_colors ]; then

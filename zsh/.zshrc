@@ -8,8 +8,8 @@ plugins=(git osx rvm ruby vagrant nyan github cap brew bundler gem)
 PATH=/Users/Chris/Android/platform-tools:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Sublime Text 2
-export EDITOR="subl -w"
+# Vim as default editor
+export EDITOR="mvim -fv"
 
 # Include .bash_aliases (maximum compatibility)
 source ~/dotfiles/.aliases
