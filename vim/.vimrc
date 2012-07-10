@@ -1,5 +1,6 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible
+filetype off
+set encoding=utf-8
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -11,8 +12,20 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
+
+
+" ========================
+" = Plugin Customization =
+" ========================
+
+" Powerline
+set laststatus=2
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_colorscheme = 'skwp'
+
 
 " =====================
 " = Behavior Settings =
@@ -23,6 +36,7 @@ set ignorecase
 set nobackup
 set nowritebackup
 set noswapfile
+
 
 " ===================
 " = Visual Settings =
