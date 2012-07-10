@@ -1,2 +1,5 @@
 .private
 .tmux.custom
+
+vim/.vim/bundle/*
+!vim/.vim/bundle/vundle
