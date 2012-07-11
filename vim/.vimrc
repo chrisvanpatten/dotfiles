@@ -2,13 +2,14 @@ set nocompatible
 filetype off
 set encoding=utf-8
 
+" Set up vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 
 " ===========
 " = Plugins =
-" =========== 
+" ===========
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
@@ -16,6 +17,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
@@ -31,6 +33,8 @@ let g:Powerline_colorscheme = 'default'
 
 " NERDTree
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeMouseMode = 2
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
