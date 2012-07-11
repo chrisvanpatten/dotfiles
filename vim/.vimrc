@@ -5,8 +5,11 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required! 
+
+" ===========
+" = Plugins =
+" =========== 
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -23,20 +26,31 @@ filetype plugin indent on
 
 " Powerline
 set laststatus=2
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'compatible'
 let g:Powerline_colorscheme = 'default'
+
+" NERDTree
+let g:NERDTreeShowHidden = 1
+autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 " =====================
 " = Behavior Settings =
 " =====================
 set ignorecase
+set title       " Nicer title
 
 " No junk files
 set nobackup
 set nowritebackup
 set noswapfile
 
+set mouse=a      " Enable the mouse
+set history=1000 " Longer history
+
+set hidden       " Enable hidden buffers
 
 " ===================
 " = Visual Settings =
@@ -49,4 +63,37 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 
 set number     " Show line numbers
+set cursorline " Highlight current line
+
+set showmatch  " Brackets/braces
+
+" Search
+set incsearch  " Incremental search
 set hlsearch   " Highlight search results
+
+" ======================
+" = Keyboard Shortcuts =
+" ======================
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+
+" ===================
+" = Text Formatting =
+" ===================
+
+set tabstop=4
+
+" =============
+" = Functions =
+" =============
+
+" Strip trailing whitespace
+function! StripWhitespace ()
+	exec ':%s/ \+$//gc'
+endfunction
+map ,s :call StripWhitespace ()<CR>
