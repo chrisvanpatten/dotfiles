@@ -11,8 +11,11 @@ PATH=/Users/Chris/Android/platform-tools:$PATH
 # Vim as default editor
 export EDITOR="mvim -fv"
 
+source $ZSH/oh-my-zsh.sh
+
 # Include .bash_aliases (maximum compatibility)
 source ~/dotfiles/.aliases
 source ~/dotfiles/.private
 
-source $ZSH/oh-my-zsh.sh
+# Set up dircolors
+eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`

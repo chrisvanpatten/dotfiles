@@ -23,7 +23,7 @@ filetype plugin indent on
 
 " Powerline
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'default'
 
 
@@ -44,5 +44,9 @@ set noswapfile
 syntax enable
 set background=dark
 colorscheme solarized
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+
 set number     " Show line numbers
 set hlsearch   " Highlight search results
