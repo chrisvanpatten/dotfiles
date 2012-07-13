@@ -18,8 +18,18 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
+
+
+" ============
+" = Syntaxes =
+" ============
+
+" These are not the droids you are looking for.
 
 
 " ========================
@@ -28,7 +38,7 @@ filetype plugin indent on
 
 " Powerline
 set laststatus=2
-let g:Powerline_symbols = 'compatible'
+let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'default'
 
 " NERDTree
@@ -39,12 +49,18 @@ autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" MiniBufExplorer
+let g:miniBufExplMapWindowNavArrows = 1  " Ctrl+arrows to navigate buffers
+let g:miniBufExplUseSingleClick = 1      " Navigate between buffers with one click
+let g:miniBufExplorerMoreThanOne=1       " Always show MBE
+let g:statusLineText = '%=Vim! '  " Custom status line
+
 
 " =====================
 " = Behavior Settings =
 " =====================
 set ignorecase
-set title       " Nicer title
+set title        " Nicer title
 
 " No junk files
 set nobackup
@@ -80,10 +96,14 @@ set hlsearch   " Highlight search results
 " ======================
 
 " Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+"nmap <silent> <c-k> :wincmd k<CR>
+"nmap <silent> <c-j> :wincmd j<CR>
+"nmap <silent> <c-h> :wincmd h<CR>
+"nmap <silent> <c-l> :wincmd l<CR>
+
+" Navigate through buffers
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
 
 
 " ===================
@@ -91,6 +111,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 " ===================
 
 set tabstop=4
+
 
 " =============
 " = Functions =

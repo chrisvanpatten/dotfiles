@@ -1,6 +1,8 @@
 [user]
 	name = Chris Van Patten
 	email = chris@vanpattenmedia.com
+[github]
+	user = chrisvanpatten
 [core]
 	excludesfile = ~/.gitignore
 [alias]

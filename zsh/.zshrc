@@ -4,8 +4,13 @@ ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
 plugins=(git osx rvm ruby vagrant nyan github cap brew bundler gem)
 
+# 256 color terminal
+export TERM=xterm-256color
+
 # Paths
-PATH=/Users/Chris/Android/platform-tools:$PATH
+PATH="$HOME/Android/platform-tools:$PATH"
+PATH="/usr/local/mysql/bin:$PATH"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Vim as default editor
