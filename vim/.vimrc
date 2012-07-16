@@ -21,6 +21,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'vim-scripts/bufkill.vim'
 
 filetype plugin indent on
 
@@ -47,13 +48,12 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " MiniBufExplorer
 let g:miniBufExplMapWindowNavArrows = 1  " Ctrl+arrows to navigate buffers
 let g:miniBufExplUseSingleClick = 1      " Navigate between buffers with one click
-let g:miniBufExplorerMoreThanOne=1       " Always show MBE
-let g:statusLineText = '%=Vim! '  " Custom status line
+let g:miniBufExplorerMoreThanOne = 1     " Always show MBE
+let g:statusLineText = '%=Vim! '         " Custom status line
 
 
 " =====================
@@ -91,19 +91,17 @@ set showmatch  " Brackets/braces
 set incsearch  " Incremental search
 set hlsearch   " Highlight search results
 
-" ======================
-" = Keyboard Shortcuts =
-" ======================
-
-" Use ctrl-[hjkl] to select the active split!
-"nmap <silent> <c-k> :wincmd k<CR>
-"nmap <silent> <c-j> :wincmd j<CR>
-"nmap <silent> <c-h> :wincmd h<CR>
-"nmap <silent> <c-l> :wincmd l<CR>
+" ===============================
+" = Keyboard Shortcuts/Mappings =
+" ===============================
 
 " Navigate through buffers
 :nnoremap <C-n> :bnext<CR>
 :nnoremap <C-p> :bprevious<CR>
+
+" Delete buffers instead of quitting them
+":cnoreabbrev wq w<bar>bd
+":cnoreabbrev q bd
 
 
 " ===================
@@ -122,3 +120,15 @@ function! StripWhitespace ()
 	exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" Exit
+au BufEnter * call MyLastWindow()
+function! MyLastWindow()
+  " if the window is quickfix go on
+  if &buftype=="nofile"
+    " if this window is last on screen quit without warning
+	if winnr('$') < 3 && winbufnr(2) == -1
+      q!
+    endif
+  endif
+endfunction
