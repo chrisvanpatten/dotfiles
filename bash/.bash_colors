@@ -14,18 +14,22 @@ if [ -n "$force_color_prompt" ]; then
 	fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-	xterm*|rxvt*)
-	PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-	;;
-	*)
-	;;
-esac
+parse_git_branch() {
+	RSLT=''
+	GIT_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' | awk '{print $2}'`
+	if [ "$GIT_BRANCH" ]; then
+		GIT_STATUS=`git status 2> /dev/null | grep 'working directory clean'`
+		CLR=''
+		if [ "$GIT_STATUS" ]; then
+			CLR=''
+		else
+			CLR='*'
+		fi
+		RSLT="‹${GIT_BRANCH}${CLR}›"
+	fi
+	echo $RSLT
+}
+
+export PS1="\[\e[0;36m\]\u@\h\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;33m\]\$(parse_git_branch)\[\e[m\] » "
