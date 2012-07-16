@@ -19,8 +19,8 @@ export EDITOR="mvim -fv"
 source $ZSH/oh-my-zsh.sh
 
 # Include .bash_aliases (maximum compatibility)
-source ~/dotfiles/.aliases
-source ~/dotfiles/.private
+source ~/dotfiles/aliases/.aliases
+source ~/dotfiles/aliases/.private
 
 # Set up dircolors
 eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`

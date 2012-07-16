@@ -11,11 +11,11 @@ if [ -f ~/dotfiles/bash/.bash_colors ]; then
 fi
 
 # Load .aliases
-if [ -f ~/dotfiles/.aliases ]; then
-	. ~/dotfiles/.aliases
+if [ -f ~/dotfiles/aliases/.aliases ]; then
+	. ~/dotfiles/aliases/.aliases
 fi
 
 # Load .private
-if [ -f ~/dotfiles/.private ]; then
-	. ~/dotfiles/.private
+if [ -f ~/dotfiles/aliases/.private ]; then
+	. ~/dotfiles/aliases/.private
 fi

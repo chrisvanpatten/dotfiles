@@ -1,5 +1,14 @@
 # .bash_aliases
 
+# Do some operating system detection
+platform="unknown"
+unamestr=$(uname)
+if [[ "$unamestr" == "Linux" ]]; then
+	platform='linux'
+elif [[ "$unamestr" == "Darwin" ]]; then
+	platform='mac'
+fi
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -17,28 +26,6 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-# Sudo (zsh parity)
-alias _='sudo'
-
-# Folder traversing (zsh parity)
-alias ..='cd ..'
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-
-# More ls (zsh parity)
-alias lsa='ls -lah'
-alias l='ls -la'
-alias ll='ls -l'
-alias sl=ls # Typo fix
-
-# Dictionary
-alias dict="dict -d wn"
-
-# GPG
-alias gpgo="gpg --symmetric --personal-cipher-preferences "AES256""
-
 # Git Aliases
 alias gs="git status"
 alias gp="git push"
@@ -48,12 +35,9 @@ alias gak="ga -A && gk"
 alias glog="git lg"
 alias glo="git lg"
 
-# RWD thumbnail generator for VanPattenMedia.com
-alias "vpmrwd"="~/dotfiles/scripts/generate-rwd.sh"
-
-# Random
-alias magic="bundle exec guard"
-alias ipfwreload="sudo ipfw -q /etc/ipfw.conf"
-
-# Tail for nginx errors
-alias tail-nginx-errors="tail -f /var/log/nginx/error.log | perl -pe 's/\[error\]/\e[1;255;31m$&\e[0m/g'"
+# Load platfrom-specific alias files
+if [[ $platform == "mac" ]]; then
+	. ~/dotfiles/aliases/.aliases.mac
+elif [[ $platform == "linux" ]]; then
+	. ~/dotfiles/aliases/.aliases.linux
+fi
