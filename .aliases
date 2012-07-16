@@ -53,6 +53,7 @@ alias "vpmrwd"="~/dotfiles/scripts/generate-rwd.sh"
 
 # Random
 alias magic="bundle exec guard"
+alias ipfwreload="sudo ipfw -q /etc/ipfw.conf"
 
 # Tail for nginx errors
 alias tail-nginx-errors="tail -f /var/log/nginx/error.log | perl -pe 's/\[error\]/\e[1;255;31m$&\e[0m/g'"
