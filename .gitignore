@@ -1,5 +1,6 @@
 .private
 .tmux.custom
 .netrwhist
+ipfw.conf
 vim/.vim/bundle/*
 !vim/.vim/bundle/vundle

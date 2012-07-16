@@ -46,6 +46,8 @@ if [[ $platform == "mac" ]]; then
 	if [[ -f /etc/ipfw.conf ]]; then
 		echo 'ipfw.conf already exists. Moving on...'
 	else
+		touch ~/dotfiles/ipfw/ipfw.conf
+
 		sudo ln -s ~/dotfiles/ipfw/ipfw.conf /etc/ipfw.conf
 		echo 'Wrote ipfw.conf symlink successfully!'
 	fi
