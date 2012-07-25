@@ -13,7 +13,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
@@ -23,6 +22,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'othree/html5.vim'
+Bundle 'mattn/zencoding-vim'
 
 filetype plugin indent on
 
@@ -60,8 +61,11 @@ let g:statusLineText = '%=Vim! '         " Custom status line
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['scss'] }
 
-" Sparkup
-let g:sparkupExecuteMapping = '<S-Tab>' 
+" ZenCoding
+let g:user_zen_expandabbr_key = '<S-Tab>' 
+let g:user_zen_settings = {
+  \  'indentation' : '	'
+  \}
 
 " =====================
 " = Behavior Settings =
@@ -91,6 +95,7 @@ let g:solarized_contrast = "high"
 
 set number     " Show line numbers
 set cursorline " Highlight current line
+set rnu        " Relative line numbers
 
 set showmatch  " Brackets/braces
 
