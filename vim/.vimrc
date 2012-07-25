@@ -22,6 +22,7 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'cakebaker/scss-syntax.vim'
 
 filetype plugin indent on
 
@@ -55,6 +56,9 @@ let g:miniBufExplUseSingleClick = 1      " Navigate between buffers with one cli
 let g:miniBufExplorerMoreThanOne = 1     " Always show MBE
 let g:statusLineText = '%=Vim! '         " Custom status line
 
+" Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'passive_filetypes': ['scss'] }
 
 " =====================
 " = Behavior Settings =
@@ -103,6 +107,8 @@ set hlsearch   " Highlight search results
 ":cnoreabbrev wq w<bar>bd
 ":cnoreabbrev q bd
 
+" Fix keymapping for tmux
+map <Esc>[B <Down>
 
 " ===================
 " = Text Formatting =
