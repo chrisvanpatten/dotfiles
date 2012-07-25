@@ -60,6 +60,9 @@ let g:statusLineText = '%=Vim! '         " Custom status line
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['scss'] }
 
+" Sparkup
+let g:sparkupExecuteMapping = '<S-Tab>' 
+
 " =====================
 " = Behavior Settings =
 " =====================
