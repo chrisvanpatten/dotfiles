@@ -24,6 +24,7 @@ Bundle 'vim-scripts/bufkill.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 filetype plugin indent on
 
@@ -32,7 +33,9 @@ filetype plugin indent on
 " = Syntaxes =
 " ============
 
-" These are not the droids you are looking for.
+" *.scss
+au BufRead,BufNewFile *.scss set filetype=scss
+autocmd FileType scss setlocal shiftwidth=4 tabstop=4
 
 
 " ========================
