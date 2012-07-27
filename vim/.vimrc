@@ -21,7 +21,7 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/bufkill.vim'
-Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'vesan/scss-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
@@ -42,33 +42,36 @@ autocmd FileType scss setlocal shiftwidth=4 tabstop=4
 " = Plugin Customization =
 " ========================
 
-" Powerline
+" vim-powerline
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'default'
 
-" NERDTree
+" nerdtree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 
-" MiniBufExplorer
+" minibufexpl.vim
 let g:miniBufExplMapWindowNavArrows = 1  " Ctrl+arrows to navigate buffers
 let g:miniBufExplUseSingleClick = 1      " Navigate between buffers with one click
 let g:miniBufExplorerMoreThanOne = 1     " Always show MBE
 let g:statusLineText = '%=Vim! '         " Custom status line
 
-" Syntastic
+" syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['scss'] }
 
-" ZenCoding
+" zencoding-vim
 let g:user_zen_expandabbr_key = '<S-Tab>' 
 let g:user_zen_settings = {
   \  'indentation' : '	'
   \}
+
+" vim-numbertoggle
+let g:NumberToggleTrigger = '<F9>'
 
 " =====================
 " = Behavior Settings =
