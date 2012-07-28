@@ -73,9 +73,11 @@ let g:user_zen_settings = {
 " vim-numbertoggle
 let g:NumberToggleTrigger = '<F9>'
 
+
 " =====================
 " = Behavior Settings =
 " =====================
+
 set ignorecase
 set title        " Nicer title
 
@@ -89,15 +91,17 @@ set history=1000 " Longer history
 
 set hidden       " Enable hidden buffers
 
+
 " ===================
 " = Visual Settings =
 " ===================
+
 syntax enable
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+let g:solarized_contrast = "normal"
+let g:solarized_visibility = "low"
 
 set number     " Show line numbers
 set cursorline " Highlight current line
@@ -109,9 +113,16 @@ set showmatch  " Brackets/braces
 set incsearch  " Incremental search
 set hlsearch   " Highlight search results
 
+" Nicer invisible characters
+set listchars=tab:▸\ ,eol:¬
+
+
 " ===============================
 " = Keyboard Shortcuts/Mappings =
 " ===============================
+
+" Remap leader
+let mapleader = ","
 
 " Navigate through buffers
 :nnoremap <C-n> :bnext<CR>
@@ -123,6 +134,10 @@ set hlsearch   " Highlight search results
 
 " Fix keymapping for tmux
 map <Esc>[B <Down>
+
+" Toggle invisible characters
+nmap <leader>l :set list!<CR>
+
 
 " ===================
 " = Text Formatting =
