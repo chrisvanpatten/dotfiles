@@ -25,6 +25,7 @@ Bundle 'vesan/scss-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'godlygeek/tabular'
 
 filetype plugin indent on
 
