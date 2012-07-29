@@ -38,6 +38,12 @@ filetype plugin indent on
 au BufRead,BufNewFile *.scss set filetype=scss
 autocmd FileType scss setlocal shiftwidth=4 tabstop=4
 
+" *.js
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+
+" *.html
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+
 
 " ========================
 " = Plugin Customization =
@@ -87,7 +93,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set mouse=a      " Enable the mouse
+" set mouse=a      " Enable the mouse
 set history=1000 " Longer history
 
 set hidden       " Enable hidden buffers
@@ -138,6 +144,16 @@ map <Esc>[B <Down>
 
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
+
+" Disable arrows in normal and visual modes
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 
 " ===================
