@@ -10,3 +10,8 @@ alias vpmrwd="~/dotfiles/scripts/generate-rwd.sh"
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/dotfiles/ipfw/ipfw.sh"
+
+# Vim
+alias vim="mvim"
+alias edit="mvim -fv"
+alias mvim="mvim -fv"
