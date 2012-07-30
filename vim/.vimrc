@@ -26,6 +26,8 @@ Bundle 'othree/html5.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'godlygeek/tabular'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on
 
