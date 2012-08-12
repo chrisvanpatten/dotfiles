@@ -24,3 +24,6 @@ source ~/dotfiles/aliases/.private
 
 # Set up dircolors
 eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
