@@ -71,7 +71,9 @@ let g:statusLineText = '%=Vim! '         " Custom status line
 
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['scss'] }
+                           \ 'passive_filetypes': ['scss', 'html'] }
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<S-Tab>' 
@@ -123,7 +125,7 @@ set incsearch  " Incremental search
 set hlsearch   " Highlight search results
 
 " Nicer invisible characters
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·
 
 
 " ===============================

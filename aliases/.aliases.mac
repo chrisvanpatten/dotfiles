@@ -13,5 +13,4 @@ alias launch="sh ~/dotfiles/ipfw/ipfw.sh"
 
 # Vim
 alias vim="mvim"
-alias edit="mvim -fv"
 alias mvim="mvim -fv"
