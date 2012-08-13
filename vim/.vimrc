@@ -127,6 +127,8 @@ set hlsearch   " Highlight search results
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
 
+set so=999     " Keep the cursor in the middle
+
 
 " ===============================
 " = Keyboard Shortcuts/Mappings =
