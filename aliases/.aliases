@@ -34,6 +34,7 @@ alias gk="git commit"
 alias gak="ga -A && gk"
 alias glog="git lg"
 alias glo="git lg"
+alias gd="git diff"
 
 # Load platfrom-specific alias files
 if [[ $platform == "mac" ]]; then

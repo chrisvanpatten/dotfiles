@@ -60,6 +60,7 @@ let g:Powerline_colorscheme = 'default'
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
+let NERDTreeIgnore = ['\.DS_Store$']
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 
@@ -127,7 +128,7 @@ set hlsearch   " Highlight search results
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
 
-set so=999     " Keep the cursor in the middle
+set so=5       " Keep the cursor in the middle
 
 
 " ===============================
