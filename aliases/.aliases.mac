@@ -10,6 +10,9 @@ alias vpmrwd="~/dotfiles/scripts/generate-rwd.sh"
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/dotfiles/ipfw/ipfw.sh"
+alias fdns="dscacheutil -flushcache"
+alias dnsflush="dscacheutil -flushcache"
+alias flushcache="dscacheutil -flushcache"
 
 # Vim
 alias vim="mvim"
