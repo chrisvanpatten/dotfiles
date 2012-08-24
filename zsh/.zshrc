@@ -10,6 +10,10 @@ export TERM=xterm-256color
 # Paths
 PATH="$HOME/Android/platform-tools:$PATH"
 PATH="/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
+
+# pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -21,9 +25,6 @@ source $(brew --prefix php-version)/php-version.sh && php-version 5.4.5 >/dev/nu
 # Vim as default editor
 export EDITOR="mvim -fv"
 
-# Oh My ZSH!
-source $ZSH/oh-my-zsh.sh
-
 # Include .bash_aliases (maximum compatibility)
 source ~/dotfiles/aliases/.aliases
 source ~/dotfiles/aliases/.private
@@ -31,5 +32,5 @@ source ~/dotfiles/aliases/.private
 # Set up dircolors
 eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
 
-# pythonbrew
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+# Oh My ZSH!
+source $ZSH/oh-my-zsh.sh
