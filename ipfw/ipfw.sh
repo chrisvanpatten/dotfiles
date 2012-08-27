@@ -11,6 +11,8 @@ elif [ $1 == 'chrisvanpatten' ]; then
 	sed 's/XXXX/8081/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'lmlmusic' ]; then
 	sed 's/XXXX/8090/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'agv' ]; then
+	sed 's/XXXX/8091/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
