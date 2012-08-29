@@ -8,6 +8,10 @@
 [alias]
 	submodule-rm = !sh ~/dotfiles/git/git-submodule-rm.sh
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[diff]
+	external = ~/dotfiles/git/git-diff-wrapper.sh
+[pager]
+	diff =
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal

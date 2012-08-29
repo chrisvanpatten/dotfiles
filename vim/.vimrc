@@ -40,6 +40,9 @@ filetype plugin indent on
 au BufRead,BufNewFile *.scss set filetype=scss
 autocmd FileType scss setlocal shiftwidth=4 tabstop=4
 
+" *.css
+autocmd FileType css setlocal shiftwidth=4 tabstop=4
+
 " *.js
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 
@@ -61,8 +64,8 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
 let NERDTreeIgnore = ['\.DS_Store$']
-autocmd vimenter * NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * NERDTree
+"autocmd vimenter * if !argc() | NERDTree | endif
 
 " minibufexpl.vim
 let g:miniBufExplMapWindowNavArrows = 1  " Ctrl+arrows to navigate buffers
@@ -152,6 +155,9 @@ map <Esc>[B <Down>
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
 
+" Open NERDTree
+nmap <leader>t :NERDTreeToggle<CR>
+
 " Disable arrows in normal and visual modes
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -187,13 +193,13 @@ endfunction
 map ,s :call StripWhitespace ()<CR>
 
 " Exit
-au BufEnter * call MyLastWindow()
-function! MyLastWindow()
-  " if the window is quickfix go on
-  if &buftype=="nofile"
-    " if this window is last on screen quit without warning
-	if winnr('$') < 3 && winbufnr(2) == -1
-      q!
-    endif
-  endif
-endfunction
+"au BufEnter * call MyLastWindow()
+"function! MyLastWindow()
+"  " if the window is quickfix go on
+"  if &buftype=="nofile"
+"    " if this window is last on screen quit without warning
+"	if winnr('$') < 3 && winbufnr(2) == -1
+"      q!
+"    endif
+"  endif
+"endfunction

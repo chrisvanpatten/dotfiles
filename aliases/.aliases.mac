@@ -17,6 +17,7 @@ alias flushcache="dscacheutil -flushcache"
 # Vim
 alias vim="mvim"
 alias mvim="mvim -fv"
+alias vimdiff="mvimdiff -fv"
 
 # Todo.txt
 alias t="todo.sh"
