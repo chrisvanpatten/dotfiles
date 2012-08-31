@@ -46,6 +46,9 @@ autocmd FileType css setlocal shiftwidth=4 tabstop=4
 " *.js
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 
+" *.php
+autocmd FileType php setlocal shiftwidth=4 tabstop=4
+
 " *.html
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
@@ -155,8 +158,11 @@ map <Esc>[B <Down>
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
 
-" Open NERDTree
+" Toggle NERDTree
 nmap <leader>t :NERDTreeToggle<CR>
+
+" Toggle minibufexpl
+nmap <leader>r :TMiniBufExplorer<cr>
 
 " Disable arrows in normal and visual modes
 nnoremap <up> <nop>
@@ -198,7 +204,7 @@ map ,s :call StripWhitespace ()<CR>
 "  " if the window is quickfix go on
 "  if &buftype=="nofile"
 "    " if this window is last on screen quit without warning
-"	if winnr('$') < 3 && winbufnr(2) == -1
+"	if winnr('$') < 2
 "      q!
 "    endif
 "  endif
