@@ -20,8 +20,10 @@ PATH="/usr/local/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # php-version
-export PHP_VERSIONS=$(dirname $(brew --prefix php54))
-source $(brew --prefix php-version)/php-version.sh && php-version 5.4.5 >/dev/null
+if which brew >/dev/null; then
+	export PHP_VERSIONS=$(dirname $(brew --prefix php54))
+	source $(brew --prefix php-version)/php-version.sh && php-version 5.4.5 >/dev/null
+fi
 
 # dircolors
 eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`

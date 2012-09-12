@@ -36,6 +36,9 @@ filetype plugin indent on
 " = Syntaxes =
 " ============
 
+" Disable all auto comments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " *.scss
 au BufRead,BufNewFile *.scss set filetype=scss
 autocmd FileType scss setlocal shiftwidth=4 tabstop=4
