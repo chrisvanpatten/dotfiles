@@ -1,8 +1,6 @@
 # ls
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-
-	alias ls="gls -CF --color=auto"
+if which gls >/dev/null; then
+	alias ls="gls -CF --group-directories-first --color=auto"
 fi
 
 # Dictionary
