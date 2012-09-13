@@ -3,6 +3,10 @@ if which gls >/dev/null; then
 	alias ls="gls -CF --group-directories-first --color=auto"
 fi
 
+if which gtail >/dev/null; then
+	alias tail="gtail"
+fi
+
 # Dictionary
 alias dict="dict -d wn"
 
