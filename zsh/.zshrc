@@ -6,7 +6,14 @@ plugins=(git osx rvm ruby vagrant nyan github cap brew bundler gem)
 
 # Settings
 export TERM=xterm-256color # 256 color terminal
-export EDITOR="mvim -fv"   # Vim as default editor
+
+if which mvim >/dev/null; then
+	export EDITOR="mvim -fv"   # Vim as default editor
+elif which gvim >/dev/null; then
+	export EDITOR="gvim -fv"   # GVim as default editor
+elif which vim >/dev/null; then
+	export EDITOR="vim"
+fi
 
 # Paths
 PATH="$HOME/Android/platform-tools:$PATH"
@@ -26,7 +33,11 @@ if which brew >/dev/null; then
 fi
 
 # dircolors
-eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+if which gdircolors >/dev/null; then
+	eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+else
+	eval `dircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+fi
 
 # oh-my-zsh! Include me before you include aliases
 source $ZSH/oh-my-zsh.sh
