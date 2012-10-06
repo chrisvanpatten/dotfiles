@@ -1,0 +1,1 @@
+vnc="x11vnc -safer -nopw -forever -display : 0"
