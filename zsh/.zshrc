@@ -49,10 +49,10 @@ source ~/dotfiles/.aliases
 # Boostrap host-name specific operations
 this=$(hostname)
 
-if [[ $hostname == "cvp" ]]; then
+if [[ $this == "cvp" ]]; then
 	source ~/dotfiles/machines/cvp/go.sh
-elif [[ $hostname == "cvp-server" ]]; then
+elif [[ $this == "cvp-server" ]]; then
 	source ~/dotfiles/machines/cvp-server/go.sh
-elif [[ $hostname == "pongo" ]]; then
+elif [[ $this == "pongo" ]]; then
 	source ~/dotfiles/machines/pongo/go.sh
 fi

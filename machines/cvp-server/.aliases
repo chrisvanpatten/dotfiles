@@ -1,1 +1,1 @@
-vnc="x11vnc -safer -nopw -forever -display : 0"
+alias vnc="x11vnc -safer -nopw -forever -display :0"
