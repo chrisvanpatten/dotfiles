@@ -43,5 +43,16 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-source ~/dotfiles/aliases/.aliases
-[[ -s "$HOME/dotfiles/aliases/.private" ]] && source ~/dotfiles/aliases/.private
+source ~/dotfiles/.aliases
+[[ -s "$HOME/dotfiles/.aliases.private" ]] && source ~/dotfiles/.aliases.private
+
+# Boostrap host-name specific operations
+this=$(hostname)
+
+if [[ $hostname == "cvp" ]]; then
+	source ~/dotfiles/machines/cvp/go.sh
+elif [[ $hostname == "cvp-server" ]]; then
+	source ~/dotfiles/machines/cvp-server/go.sh
+elif [[ $hostname == "pongo" ]]; then
+	source ~/dotfiles/machines/pongo/go.sh
+fi

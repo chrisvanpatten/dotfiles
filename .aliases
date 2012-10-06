@@ -1,14 +1,5 @@
 # .bash_aliases
 
-# Do some operating system detection
-platform="unknown"
-unamestr=$(uname)
-if [[ "$unamestr" == "Linux" ]]; then
-	platform='linux'
-elif [[ "$unamestr" == "Darwin" ]]; then
-	platform='mac'
-fi
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -31,10 +22,3 @@ alias gak="ga -A && gk"
 alias glog="git lg"
 alias glo="git lg"
 alias gd="git diff"
-
-# Load platfrom-specific alias files
-if [[ $platform == "mac" ]]; then
-	. ~/dotfiles/aliases/.aliases.mac
-elif [[ $platform == "linux" ]]; then
-	. ~/dotfiles/aliases/.aliases.linux
-fi
