@@ -10,13 +10,15 @@ if [ $1 == 'vanpattenmedia' ]; then
 elif [ $1 == 'chrisvanpatten' ]; then
 	sed 's/XXXX/8081/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'lmlmusic' ]; then
-	sed 's/XXXX/8090/' ipfw.template.conf > ipfw.conf
+	sed 's/XXXX/15001/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'agv' ]; then
-	sed 's/XXXX/8091/' ipfw.template.conf > ipfw.conf
-elif [ $1 == 'coachmenyc' ]; then
-	sed 's/XXXX/8092/' ipfw.template.conf > ipfw.conf
+	sed 's/XXXX/15002/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'hibi' ]; then
+	sed 's/XXXX/15003/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'carbonview' ]; then
 	sed 's/XXXX/8093/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'coachmenyc' ]; then
+	sed 's/XXXX/8092/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
