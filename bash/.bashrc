@@ -10,6 +10,11 @@ if [ -f ~/dotfiles/bash/.bash_colors ]; then
 	. ~/dotfiles/bash/.bash_colors
 fi
 
+# Load pongo-specific stuff
+if [ -f ~/dotfiles/machines/pongo/go.sh ]; then
+	. ~/dotfiles/machines/pongo/go.sh
+fi
+
 # Load .aliases
 if [ -f ~/dotfiles/.aliases ]; then
 	. ~/dotfiles/.aliases
