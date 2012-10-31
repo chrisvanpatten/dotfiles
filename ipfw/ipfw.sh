@@ -6,9 +6,7 @@
 cd ~/dotfiles/ipfw
 
 if [ $1 == 'vanpattenmedia' ]; then
-	sed 's/XXXX/8080/' ipfw.template.conf > ipfw.conf
-elif [ $1 == 'chrisvanpatten' ]; then
-	sed 's/XXXX/8081/' ipfw.template.conf > ipfw.conf
+	sed 's/XXXX/15000/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'lmlmusic' ]; then
 	sed 's/XXXX/15001/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'agv' ]; then
@@ -18,7 +16,7 @@ elif [ $1 == 'hibi' ]; then
 elif [ $1 == 'carbonview' ]; then
 	sed 's/XXXX/8093/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'coachmenyc' ]; then
-	sed 's/XXXX/8092/' ipfw.template.conf > ipfw.conf
+	sed 's/XXXX/15005/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'tstest' ]; then
 	sed 's/XXXX/15006/' ipfw.template.conf > ipfw.conf
 fi

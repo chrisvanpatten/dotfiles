@@ -166,7 +166,10 @@ nmap <leader>l :set list!<CR>
 nmap <leader>t :NERDTreeToggle<CR>
 
 " Toggle minibufexpl
-nmap <leader>r :TMiniBufExplorer<cr>
+nmap <leader>r :TMiniBufExplorer<CR>
+
+" nohls
+nmap <leader>e :nohls<CR>
 
 " Disable arrows in normal and visual modes
 nnoremap <up> <nop>
