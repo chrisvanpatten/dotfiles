@@ -7,6 +7,9 @@ if which gtail >/dev/null; then
 	alias tail="gtail"
 fi
 
+# sudo
+aliassudo="nocorrect sudo"
+
 # Dictionary
 alias dict="dict -d wn"
 

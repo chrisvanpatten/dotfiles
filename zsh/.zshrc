@@ -56,3 +56,5 @@ elif [[ $this == "cvp-server" ]]; then
 elif [[ $this == "pongo" ]]; then
 	source ~/dotfiles/machines/pongo/go.sh
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

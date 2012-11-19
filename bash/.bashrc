@@ -24,3 +24,5 @@ fi
 if [ -f ~/dotfiles/.aliases.private ]; then
 	. ~/dotfiles/.aliases.private
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

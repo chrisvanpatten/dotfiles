@@ -19,6 +19,8 @@ elif [ $1 == 'coachmenyc' ]; then
 	sed 's/XXXX/15005/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'tstest' ]; then
 	sed 's/XXXX/15006/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'oneregionforward' ]; then
+	sed 's/XXXX/15007/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
