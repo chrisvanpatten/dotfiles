@@ -4,12 +4,12 @@
 [github]
 	user = chrisvanpatten
 [core]
-	excludesfile = ~/dotfiles/git/.gitignore
+	excludesfile = ~/.dotfiles/git/.gitignore
 [alias]
-	submodule-rm = !sh ~/dotfiles/git/git-submodule-rm.sh
+	submodule-rm = !sh ~/.dotfiles/git/git-submodule-rm.sh
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [diff]
-	external = ~/dotfiles/git/git-diff-wrapper.sh
+	external = ~/.dotfiles/git/git-diff-wrapper.sh
 [pager]
 	diff =
 

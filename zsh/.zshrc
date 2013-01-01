@@ -34,27 +34,27 @@ fi
 
 # dircolors
 if which gdircolors >/dev/null; then
-	eval `gdircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+	eval `gdircolors $HOME/.dotfiles/dircolors/dircolors.ansi-universal`
 else
-	eval `dircolors $HOME/dotfiles/dircolors/dircolors.ansi-universal`
+	eval `dircolors $HOME/.dotfiles/dircolors/dircolors.ansi-universal`
 fi
 
 # oh-my-zsh! Include me before you include aliases
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-source ~/dotfiles/.aliases
-[[ -s "$HOME/dotfiles/.aliases.private" ]] && source ~/dotfiles/.aliases.private
+source ~/.dotfiles/.aliases
+[[ -s "$HOME/.dotfiles/.aliases.private" ]] && source ~/.dotfiles/.aliases.private
 
 # Boostrap host-name specific operations
 this=$(hostname)
 
 if [[ $this == "cvp" ]]; then
-	source ~/dotfiles/machines/cvp/go.sh
+	source ~/.dotfiles/machines/cvp/go.sh
 elif [[ $this == "cvp-server" ]]; then
-	source ~/dotfiles/machines/cvp-server/go.sh
+	source ~/.dotfiles/machines/cvp-server/go.sh
 elif [[ $this == "pongo" ]]; then
-	source ~/dotfiles/machines/pongo/go.sh
+	source ~/.dotfiles/machines/pongo/go.sh
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

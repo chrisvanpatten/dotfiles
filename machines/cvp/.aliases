@@ -17,11 +17,11 @@ alias dict="dict -d wn"
 alias gpgo="gpg --symmetric --personal-cipher-preferences "AES256""
 
 # RWD thumbnail generator for VanPattenMedia.com
-alias vpmrwd="~/dotfiles/scripts/generate-rwd.sh"
+alias vpmrwd="~/.dotfiles/scripts/generate-rwd.sh"
 
 # Webdev
 alias magic="bundle exec guard"
-alias launch="sh ~/dotfiles/ipfw/ipfw.sh"
+alias launch="sh ~/.dotfiles/ipfw/ipfw.sh"
 alias fdns="dscacheutil -flushcache"
 alias dnsflush="dscacheutil -flushcache"
 alias flushcache="dscacheutil -flushcache"

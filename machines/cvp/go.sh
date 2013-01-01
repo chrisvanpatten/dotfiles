@@ -1,2 +1,2 @@
 # Load aliases
-. ~/dotfiles/machines/cvp/.aliases
+. ~/.dotfiles/machines/cvp/.aliases
