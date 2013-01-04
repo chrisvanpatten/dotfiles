@@ -3,7 +3,7 @@
 # Syntax:
 # launch sitename
 
-cd ~/dotfiles/ipfw
+cd ~/.dotfiles/ipfw
 
 if [ $1 == 'vanpattenmedia' ]; then
 	sed 's/XXXX/15000/' ipfw.template.conf > ipfw.conf
