@@ -14,7 +14,7 @@ aliassudo="nocorrect sudo"
 alias dict="dict -d wn"
 
 # GPG
-alias gpgo="gpg --symmetric --personal-cipher-preferences "AES256""
+alias gpgo="gpg2 --symmetric --personal-cipher-preferences "AES256""
 
 # RWD thumbnail generator for VanPattenMedia.com
 alias vpmrwd="~/.dotfiles/scripts/generate-rwd.sh"

@@ -19,6 +19,7 @@ fi
 PATH="$HOME/Android/platform-tools:$PATH"
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
 
 # pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
