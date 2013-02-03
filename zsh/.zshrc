@@ -30,7 +30,7 @@ PATH="/usr/local/sbin:$PATH"
 # php-version
 if which brew >/dev/null; then
 	export PHP_VERSIONS=$(dirname $(brew --prefix php54))
-	source $(brew --prefix php-version)/php-version.sh && php-version 5.4.5 >/dev/null
+	source $(brew --prefix php-version)/php-version.sh && php-version php54 >/dev/null
 fi
 
 # dircolors
