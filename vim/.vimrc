@@ -12,20 +12,23 @@ call vundle#rc()
 " ===========
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
 Bundle 'fholgado/minibufexpl.vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/bufkill.vim'
-Bundle 'vesan/scss-syntax.vim'
-Bundle 'othree/html5.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+
+
+" ============
+" = Syntaxes =
+" ============
+Bundle 'vesan/scss-syntax.vim'
+Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 
@@ -70,23 +73,13 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
 let NERDTreeIgnore = ['\.DS_Store$']
-"autocmd vimenter * NERDTree
-"autocmd vimenter * if !argc() | NERDTree | endif
 
 " minibufexpl.vim
-let g:miniBufExplMapWindowNavArrows = 1  " Ctrl+arrows to navigate buffers
-let g:miniBufExplUseSingleClick = 1      " Navigate between buffers with one click
-let g:miniBufExplorerMoreThanOne = 1     " Always show MBE
-let g:statusLineText = '%=Vim! '         " Custom status line
-
-" syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['scss', 'html', 'php'] }
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+let g:miniBufExplorerMoreThanOne = 1 " Always show MBE
+let g:statusLineText = '%=Vim! '     " Custom status line
 
 " zencoding-vim
-let g:user_zen_expandabbr_key = '<S-Tab>' 
+let g:user_zen_expandabbr_key = '<S-Tab>'
 let g:user_zen_settings = {
   \  'indentation' : '	'
   \}
@@ -118,11 +111,13 @@ set hidden       " Enable hidden buffers
 " ===================
 
 syntax enable
+
+" solarized
+call togglebg#map("<F5>")
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
-let g:solarized_contrast = "normal"
-let g:solarized_visibility = "low"
+let g:solarized_termtrans = 1
 
 set number     " Show line numbers
 set cursorline " Highlight current line
@@ -151,10 +146,6 @@ let mapleader = ","
 :nnoremap <C-n> :bnext<CR>
 :nnoremap <C-p> :bprevious<CR>
 
-" Delete buffers instead of quitting them
-":cnoreabbrev wq w<bar>bd
-":cnoreabbrev q bd
-
 " Fix keymapping for tmux
 map <Esc>[B <Down>
 
@@ -169,16 +160,6 @@ nmap <leader>r :TMiniBufExplorer<CR>
 
 " nohls
 nmap <leader>e :nohls<CR>
-
-" Disable arrows in normal and visual modes
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
@@ -203,15 +184,3 @@ function! StripWhitespace ()
 	exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
-
-" Exit
-"au BufEnter * call MyLastWindow()
-"function! MyLastWindow()
-"  " if the window is quickfix go on
-"  if &buftype=="nofile"
-"    " if this window is last on screen quit without warning
-"	if winnr('$') < 2
-"      q!
-"    endif
-"  endif
-"endfunction
