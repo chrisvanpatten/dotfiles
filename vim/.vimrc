@@ -24,6 +24,36 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 
 
+" ========================
+" = Plugin Customization =
+" ========================
+
+" vim-powerline
+set laststatus=2
+let g:Powerline_symbols = 'unicode'
+
+" nerdtree
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let NERDTreeIgnore = ['\.DS_Store$']
+
+" minibufexpl.vim
+let g:miniBufExplorerMoreThanOne = 1 " Always show MBE
+let g:statusLineText = '%=Vim! '     " Custom status line
+
+" zencoding-vim
+let g:user_zen_expandabbr_key = '<S-Tab>'
+let g:user_zen_settings = {
+  \  'indentation' : '	'
+  \}
+
+" vim-numbertoggle
+let g:NumberToggleTrigger = '<F9>'
+
+" ctrlp
+let g:ctrlp_map = '<c-m-p>'
+
+
 " ============
 " = Syntaxes =
 " ============
@@ -33,11 +63,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on
-
-
-" ============
-" = Syntaxes =
-" ============
 
 " Disable all auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -59,51 +84,19 @@ autocmd FileType php setlocal shiftwidth=4 tabstop=4
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
 
-" ========================
-" = Plugin Customization =
-" ========================
-
-" vim-powerline
-set laststatus=2
-let g:Powerline_symbols = 'unicode'
-let g:Powerline_colorscheme = 'default'
-
-" nerdtree
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeMouseMode = 2
-let NERDTreeIgnore = ['\.DS_Store$']
-
-" minibufexpl.vim
-let g:miniBufExplorerMoreThanOne = 1 " Always show MBE
-let g:statusLineText = '%=Vim! '     " Custom status line
-
-" zencoding-vim
-let g:user_zen_expandabbr_key = '<S-Tab>'
-let g:user_zen_settings = {
-  \  'indentation' : '	'
-  \}
-
-" vim-numbertoggle
-let g:NumberToggleTrigger = '<F9>'
-
-
 " =====================
 " = Behavior Settings =
 " =====================
 
 set ignorecase
 set title        " Nicer title
+set history=1000 " Longer history
+set hidden       " Enable hidden buffers
+set tabstop=4    " Tab width
 
-" No junk files
-set nobackup
+set nobackup     " No junk files
 set nowritebackup
 set noswapfile
-
-" set mouse=a      " Enable the mouse
-set history=1000 " Longer history
-
-set hidden       " Enable hidden buffers
 
 
 " ===================
@@ -122,8 +115,8 @@ let g:solarized_termtrans = 1
 set number     " Show line numbers
 set cursorline " Highlight current line
 set rnu        " Relative line numbers
-
 set showmatch  " Brackets/braces
+set so=5       " Keep the cursor in the middle
 
 " Search
 set incsearch  " Incremental search
@@ -132,12 +125,13 @@ set hlsearch   " Highlight search results
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
 
-set so=5       " Keep the cursor in the middle
-
 
 " ===============================
 " = Keyboard Shortcuts/Mappings =
 " ===============================
+
+" Fix keymapping for tmux
+map <Esc>[B <Down>
 
 " Remap leader
 let mapleader = ","
@@ -146,33 +140,22 @@ let mapleader = ","
 :nnoremap <C-n> :bnext<CR>
 :nnoremap <C-p> :bprevious<CR>
 
-" Fix keymapping for tmux
-map <Esc>[B <Down>
-
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
 
-" Toggle NERDTree
-nmap <leader>t :NERDTreeToggle<CR>
-
-" Toggle minibufexpl
-nmap <leader>r :TMiniBufExplorer<CR>
-
-" nohls
+" Disable search result highlighting
 nmap <leader>e :nohls<CR>
+
+" Toggle plugins
+nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>r :TMiniBufExplorer<CR>
+nmap <leader>c :CtrlP<CR>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-
-
-" ===================
-" = Text Formatting =
-" ===================
-
-set tabstop=4
 
 
 " =============
@@ -183,4 +166,4 @@ set tabstop=4
 function! StripWhitespace ()
 	exec ':%s/ \+$//gc'
 endfunction
-map ,s :call StripWhitespace ()<CR>
+map <Leader>s :call StripWhitespace ()<CR>
