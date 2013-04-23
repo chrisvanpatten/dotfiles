@@ -10,10 +10,11 @@
 	excludesfile = ~/.dotfiles/git/.gitignore
 [diff]
 	external = ~/.dotfiles/git/git-diff-wrapper.sh
+		tool = vimdiff
 [pager]
 	diff =
 [push]
-	default = simple
+	default = matching
 
 [color]
 	ui = auto

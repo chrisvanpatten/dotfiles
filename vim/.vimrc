@@ -44,23 +44,28 @@ let g:statusLineText = '%=Vim! '     " Custom status line
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<S-Tab>'
 let g:user_zen_settings = {
-  \  'indentation' : '	'
-  \}
+  \ 'indentation' : '	'
+  \ }
 
 " vim-numbertoggle
 let g:NumberToggleTrigger = '<F9>'
 
 " ctrlp
 let g:ctrlp_map = '<c-m-p>'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'wp',
+  \ }
 
 
 " ============
 " = Syntaxes =
 " ============
+
 Bundle 'vesan/scss-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 

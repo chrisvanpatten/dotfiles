@@ -17,12 +17,18 @@ elif [ $1 == 'carbonview' ]; then
 	sed 's/XXXX/8093/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'coachmenyc' ]; then
 	sed 's/XXXX/15005/' ipfw.template.conf > ipfw.conf
-elif [ $1 == 'saraelizabethmusic' ]; then
+elif [ $1 == 'newvpm' ]; then
 	sed 's/XXXX/15006/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'oneregionforward' ]; then
 	sed 's/XXXX/15007/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'testsite' ]; then
 	sed 's/XXXX/15008/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'pagecraft' ]; then
+	sed 's/XXXX/15009/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'gents' ]; then
+	sed 's/XXXX/15010/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'offbroadway' ]; then
+	sed 's/XXXX/15011/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
