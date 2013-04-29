@@ -103,7 +103,6 @@ set nobackup     " No junk files
 set nowritebackup
 set noswapfile
 
-set clipboard=unnamed " Slightly better pasteboard support
 
 " ===================
 " = Visual Settings =
