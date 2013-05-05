@@ -1,15 +1,14 @@
 set nocompatible
-filetype off
 set encoding=utf-8
-
-" Set up vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
 
 " ===========
 " = Plugins =
 " ===========
+
+" Set up vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
@@ -29,7 +28,7 @@ Bundle 'kien/ctrlp.vim'
 " ========================
 
 " vim-powerline
-set laststatus=2
+set laststatus=1
 let g:Powerline_symbols = 'unicode'
 
 " nerdtree
@@ -38,7 +37,6 @@ let g:NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\.DS_Store$']
 
 " minibufexpl.vim
-let g:miniBufExplorerMoreThanOne = 1 " Always show MBE
 let g:statusLineText = '%=Vim! '     " Custom status line
 
 " zencoding-vim
@@ -67,48 +65,61 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 
+" Enable plugin indentation
 filetype plugin indent on
 
+" Set a default tabstop
+set ts=4
+
 " Disable all auto comments
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " *.scss
 au BufRead,BufNewFile *.scss set filetype=scss
-autocmd FileType scss setlocal shiftwidth=4 tabstop=4
+autocmd FileType scss setlocal sw=4 ts=4
 
 " *.css
-autocmd FileType css setlocal shiftwidth=4 tabstop=4
+autocmd FileType css setlocal sw=4 ts=4
 
 " *.js
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal sw=4 ts=4
 
 " *.php
-autocmd FileType php setlocal shiftwidth=4 tabstop=4
+autocmd FileType php setlocal sw=4 ts=4
 
 " *.html
-autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType html setlocal sw=4 ts=4
+
+" *.rb
+autocmd FileType ruby setlocal et sw=2 ts=2 sts=2
 
 
 " =====================
 " = Behavior Settings =
 " =====================
 
-set ignorecase
 set title        " Nicer title
 set history=1000 " Longer history
 set hidden       " Enable hidden buffers
-set tabstop=4    " Tab width
 
 set nobackup     " No junk files
 set nowritebackup
 set noswapfile
+
+" Search
+set ignorecase   " Case insensitive search
+set incsearch    " Incremental search
+set hlsearch     " Highlight search results
+
+" Fix for delay with O
+set timeout timeoutlen=1000 ttimeoutlen=100
 
 
 " ===================
 " = Visual Settings =
 " ===================
 
-syntax enable
+syntax enable  " Syntax highlighting
 
 " solarized
 call togglebg#map("<F5>")
@@ -118,14 +129,10 @@ let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
 
 set number     " Show line numbers
-set cursorline " Highlight current line
 set rnu        " Relative line numbers
-set showmatch  " Brackets/braces
-set so=5       " Keep the cursor in the middle
-
-" Search
-set incsearch  " Incremental search
-set hlsearch   " Highlight search results
+set cursorline " Highlight current line
+set so=5       " Keep the cursor in the middle (ish)
+set showmatch  " Brackets/braces: highlight match
 
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
@@ -156,7 +163,7 @@ nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :TMiniBufExplorer<CR>
 nmap <leader>c :CtrlP<CR>
 
-" Use ctrl-[hjkl] to select the active split!
+" Use ctrl-[hjkl] to select the active split
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
