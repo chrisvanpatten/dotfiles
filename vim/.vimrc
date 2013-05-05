@@ -17,7 +17,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'mattn/zencoding-vim'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
@@ -46,7 +46,7 @@ let g:user_zen_settings = {
   \ }
 
 " vim-numbertoggle
-let g:NumberToggleTrigger = '<F9>'
+" let g:NumberToggleTrigger = '<F9>'
 
 " ctrlp
 let g:ctrlp_map = '<c-m-p>'
@@ -162,6 +162,8 @@ nmap <leader>e :nohls<CR>
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :TMiniBufExplorer<CR>
 nmap <leader>c :CtrlP<CR>
+nmap <leader>1 :NumbersToggle<CR>
+nmap <leader>2 :set invnumber<CR>
 
 " Use ctrl-[hjkl] to select the active split
 nmap <silent> <c-k> :wincmd k<CR>
