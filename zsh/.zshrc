@@ -51,11 +51,11 @@ source ~/.dotfiles/.aliases
 this=$(hostname)
 
 if [[ $this == "cvp" ]]; then
-	source ~/.dotfiles/machines/cvp/go.sh
+	source ~/.dotfiles/aliases/cvp.aliases
 elif [[ $this == "cvp-server" ]]; then
-	source ~/.dotfiles/machines/cvp-server/go.sh
+	source ~/.dotfiles/aliases/cvp-server
 elif [[ $this == "pongo" ]]; then
-	source ~/.dotfiles/machines/pongo/go.sh
+	source ~/.dotfiles/aliases/pongo.vanpattenmedia.com
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
