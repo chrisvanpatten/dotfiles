@@ -8,7 +8,7 @@ if which gtail >/dev/null; then
 fi
 
 # sudo
-aliassudo="nocorrect sudo"
+zudo="nocorrect sudo"
 
 # Dictionary
 alias dict="dict -d wn"
@@ -23,9 +23,7 @@ alias t="~/.dotfiles/scripts/tmux.sh"
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/.dotfiles/ipfw/ipfw.sh"
-alias fdns="dscacheutil -flushcache"
-alias dnsflush="dscacheutil -flushcache"
-alias flushcache="dscacheutil -flushcache"
+alias dnsf="dscacheutil -flushcache"
 
 # Vim
 alias vim="mvim"

@@ -11,7 +11,6 @@ alias cd.....='cd ../../../..'
 # More ls (zsh parity)
 alias ls="ls -CF --group-directories-first --color=auto"
 alias lsa='ls -lah'
-alias l='ls -la'
 alias ll='ls -l'
 alias sl=ls # Typo fix
 

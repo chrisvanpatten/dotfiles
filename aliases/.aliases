@@ -1,4 +1,4 @@
-# .bash_aliases
+# .aliases
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -13,12 +13,14 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
+# ls
+alias l='ls -lah'
+
 # Git Aliases
 alias gs="git status"
 alias gp="git push"
 alias gc="git commit"
 alias gk="git commit"
-alias gak="ga -A && gk"
-alias glog="git lg"
+alias gak="git add -A && git commit"
 alias glo="git lg"
 alias gd="git diff"

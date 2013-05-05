@@ -1,28 +1,19 @@
 # Paths
-PATH=~/platform-tools:$PATH
-[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
+PATH="~/platform-tools:$PATH"
+DOTFILES="$HOME/dotfiles"
 
 # Vim
 export EDITOR='vim'
 
 # Load .bash_colors
-if [ -f ~/.dotfiles/bash/.bash_colors ]; then
-	. ~/.dotfiles/bash/.bash_colors
-fi
+[[ -s "$DOTFILES/bash/.bash_colors" ]] && source "$DOTFILES/bash/.bash_colors"
 
-# Load pongo-specific stuff
-if [ -f ~/.dotfiles/machines/pongo/go.sh ]; then
-	. ~/.dotfiles/machines/pongo/go.sh
-fi
-
-# Load .aliases
-if [ -f ~/.dotfiles/.aliases ]; then
-	. ~/.dotfiles/.aliases
-fi
+# Load aliases
+[[ -s "$DOTFILES/aliases/pongo.vanpattenmedia.com" ]] && source "$DOTFILES/aliases/pongo.vanpattenmedia.com"
+[[ -s "$DOTFILES/aliases/.aliases" ]] && source "$DOTFILES/aliases/.aliases"
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
 
 # Load .private
-if [ -f ~/.dotfiles/.aliases.private ]; then
-	. ~/.dotfiles/.aliases.private
-fi
+[[ -s "$DOTFILES/aliases/.private" ]] && source "$DOTFILES/aliases/.private"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

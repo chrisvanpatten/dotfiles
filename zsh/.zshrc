@@ -1,12 +1,23 @@
-# oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Set up the environment
+ZSH="$HOME/.oh-my-zsh"
+DOTFILES="$HOME/.dotfiles"
+
+# PATH
+PATH="$HOME/Android/platform-tools:$PATH"
+PATH="/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
+PATH="$PATH:$HOME/.rvm/bin"
+
+# oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
 plugins=(git osx rvm ruby vagrant nyan github cap brew bundler gem)
 
-# Settings
+# Shell Settings
 export TERM=xterm-256color # 256 color terminal
 
+# Set EDITOR
 if which mvim >/dev/null; then
 	export EDITOR="mvim -fv"   # Vim as default editor
 elif which gvim >/dev/null; then
@@ -14,12 +25,6 @@ elif which gvim >/dev/null; then
 elif which vim >/dev/null; then
 	export EDITOR="vim"
 fi
-
-# Paths
-PATH="$HOME/Android/platform-tools:$PATH"
-PATH="/usr/local/mysql/bin:$PATH"
-PATH="/usr/local/bin:$PATH"
-PATH="/usr/local/sbin:$PATH"
 
 # pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
@@ -44,18 +49,16 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-source ~/.dotfiles/.aliases
-[[ -s "$HOME/.dotfiles/.aliases.private" ]] && source ~/.dotfiles/.aliases.private
+[[ -s "$DOTFILES/aliases/.aliases" ]] && source $DOTFILES/aliases/.aliases
+[[ -s "$DOTFILES/aliases/.private" ]] && source $DOTFILES/aliases/.private
 
 # Boostrap host-name specific operations
 this=$(hostname)
 
 if [[ $this == "cvp" ]]; then
-	source ~/.dotfiles/aliases/cvp.aliases
+	source $DOTFILES/aliases/cvp
 elif [[ $this == "cvp-server" ]]; then
-	source ~/.dotfiles/aliases/cvp-server
-elif [[ $this == "pongo" ]]; then
-	source ~/.dotfiles/aliases/pongo.vanpattenmedia.com
+	source $DOTFILES/aliases/cvp-server
+elif [[ $this == "pongo.vanpattenmedia.com" ]]; then
+	source $DOTFILES/aliases/pongo.vanpattenmedia.com
 fi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
