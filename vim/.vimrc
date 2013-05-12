@@ -26,16 +26,10 @@ Bundle 'kien/ctrlp.vim'
 " = Plugin Customization =
 " ========================
 
-" vim-powerline
-set laststatus=1
-
 " nerdtree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\.DS_Store$']
-
-" minibufexpl.vim
-let g:statusLineText = '%=Vim! ' " Custom status line
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<S-Tab>'
@@ -65,9 +59,6 @@ filetype plugin indent on
 
 " Set a default tabstop
 set ts=4
-
-" Disable all auto comments
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " *.scss
 au BufRead,BufNewFile *.scss set filetype=scss
@@ -114,20 +105,21 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " = Visual Settings =
 " ===================
 
-syntax enable  " Syntax highlighting
+syntax enable    " Syntax highlighting
+set number       " Show line numbers
+set rnu          " Relative line numbers
+set cursorline   " Highlight current line
+set so=5         " Keep the cursor in the middle (ish)
+set showmatch    " Brackets/braces: highlight match
+set laststatus=0 " Disable statusline
 
 " solarized
-call togglebg#map("<F5>")
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
 
-set number     " Show line numbers
-set rnu        " Relative line numbers
-set cursorline " Highlight current line
-set so=5       " Keep the cursor in the middle (ish)
-set showmatch  " Brackets/braces: highlight match
+call togglebg#map("<F5>")
 
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
