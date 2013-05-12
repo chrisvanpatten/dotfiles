@@ -12,7 +12,7 @@ PATH="$PATH:$HOME/.rvm/bin"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(git osx rvm ruby vagrant nyan github cap brew bundler gem)
+plugins=(git osx rvm ruby vagrant cap brew bundler gem)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
@@ -27,7 +27,7 @@ elif which vim >/dev/null; then
 fi
 
 # pythonbrew
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+#[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
