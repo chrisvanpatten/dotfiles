@@ -13,7 +13,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'mattn/zencoding-vim'
@@ -29,7 +28,6 @@ Bundle 'kien/ctrlp.vim'
 
 " vim-powerline
 set laststatus=1
-let g:Powerline_symbols = 'unicode'
 
 " nerdtree
 let g:NERDTreeShowHidden = 1
@@ -37,16 +35,13 @@ let g:NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\.DS_Store$']
 
 " minibufexpl.vim
-let g:statusLineText = '%=Vim! '     " Custom status line
+let g:statusLineText = '%=Vim! ' " Custom status line
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<S-Tab>'
 let g:user_zen_settings = {
   \ 'indentation' : '	'
   \ }
-
-" vim-numbertoggle
-" let g:NumberToggleTrigger = '<F9>'
 
 " ctrlp
 let g:ctrlp_map = '<c-m-p>'
@@ -149,8 +144,8 @@ map <Esc>[B <Down>
 let mapleader = ","
 
 " Navigate through buffers
-:nnoremap <C-n> :bnext<CR>
-:nnoremap <C-p> :bprevious<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprevious<CR>
 
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
