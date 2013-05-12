@@ -60,23 +60,23 @@ filetype plugin indent on
 " Set a default tabstop
 set ts=4
 
-" *.scss
+" SCSS
 au BufRead,BufNewFile *.scss set filetype=scss
 autocmd FileType scss setlocal sw=4 ts=4
 
-" *.css
+" CSS
 autocmd FileType css setlocal sw=4 ts=4
 
-" *.js
+" JavaScript
 autocmd FileType javascript setlocal sw=4 ts=4
 
-" *.php
+" PHP
 autocmd FileType php setlocal sw=4 ts=4
 
-" *.html
+" HTML
 autocmd FileType html setlocal sw=4 ts=4
 
-" *.rb
+" Ruby
 autocmd FileType ruby setlocal et sw=2 ts=2 sts=2
 
 
@@ -132,12 +132,18 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 " Fix keymapping for tmux
 map <Esc>[B <Down>
 
-" Remap leader
-let mapleader = ","
-
 " Navigate through buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprevious<CR>
+
+" Use ctrl-[hjkl] to select the active split
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" Remap leader
+let mapleader = ","
 
 " Toggle invisible characters
 nmap <leader>l :set list!<CR>
@@ -151,12 +157,6 @@ nmap <leader>r :TMiniBufExplorer<CR>
 nmap <leader>c :CtrlP<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
-
-" Use ctrl-[hjkl] to select the active split
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
 
 
 " =============
