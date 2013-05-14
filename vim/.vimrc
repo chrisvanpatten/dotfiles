@@ -38,7 +38,8 @@ let g:user_zen_settings = {
   \ }
 
 " ctrlp
-let g:ctrlp_map = '<c-m-p>'
+let g:ctrlp_map = '<leader>c'
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'wp',
   \ }
@@ -154,7 +155,7 @@ nmap <leader>e :nohls<CR>
 " Toggle plugins
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :TMiniBufExplorer<CR>
-nmap <leader>c :CtrlP<CR>
+"nmap <leader>c :CtrlP<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
 
