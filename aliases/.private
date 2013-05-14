@@ -1,4 +1,0 @@
-# Private aliases
-alias cruella="ssh -p 4732 chris@cruella"
-alias pongo="ssh -p 9012 chris@pongo"
-alias server="ssh -p 2508 chris@server"
