@@ -49,7 +49,7 @@ let g:ctrlp_custom_ignore = {
 " = Syntaxes =
 " ============
 
-Bundle 'vesan/scss-syntax.vim'
+Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
