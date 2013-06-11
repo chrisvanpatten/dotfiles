@@ -26,9 +26,13 @@ elif [ $1 == 'testsite' ]; then
 elif [ $1 == 'pagecraft' ]; then
 	sed 's/XXXX/15009/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'gents' ]; then
-	sed 's/XXXX/15010/' ipfw.template.conf > ipfw.conf
+	sed 's/XXXX/15015/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'offbroadway' ]; then
 	sed 's/XXXX/15011/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'spot-onentertainment' ]; then
+	sed 's/XXXX/15012/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'slhc' ]; then
+	sed 's/XXXX/15013/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
