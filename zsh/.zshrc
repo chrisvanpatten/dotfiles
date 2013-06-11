@@ -12,7 +12,7 @@ PATH="$PATH:$HOME/.rvm/bin"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(git osx rvm vagrant cap brew bundler gem)
+plugins=(git osx rvm cap brew bundler gem)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
