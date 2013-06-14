@@ -33,6 +33,8 @@ elif [ $1 == 'spot-onentertainment' ]; then
 	sed 's/XXXX/15012/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'slhc' ]; then
 	sed 's/XXXX/15013/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'gorehearse' ]; then
+	sed 's/XXXX/15014/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
