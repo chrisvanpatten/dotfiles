@@ -24,6 +24,7 @@ alias t="~/.dotfiles/scripts/tmux.sh"
 alias magic="bundle exec guard"
 alias launch="sh ~/.dotfiles/ipfw/ipfw.sh"
 alias dnsf="dscacheutil -flushcache"
+alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 
 # Vim
 alias vim="mvim"
