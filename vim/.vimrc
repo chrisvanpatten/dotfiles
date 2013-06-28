@@ -137,6 +137,9 @@ map <Esc>[B <Down>
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprevious<CR>
 
+nnoremap <silent> <Up>   gk
+nnoremap <silent> <Down> gj
+
 " Use ctrl-[hjkl] to select the active split
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
