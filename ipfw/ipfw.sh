@@ -31,7 +31,7 @@ elif [ $1 == 'offbroadway' ]; then
 	sed 's/XXXX/15011/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'spot-onentertainment' ]; then
 	sed 's/XXXX/15012/' ipfw.template.conf > ipfw.conf
-elif [ $1 == 'slhc' ]; then
+elif [ $1 == 'dslice' ]; then
 	sed 's/XXXX/15013/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'studiosleuth' ]; then
 	sed 's/XXXX/15014/' ipfw.template.conf > ipfw.conf
@@ -39,6 +39,8 @@ elif [ $1 == 'buyerandcellar' ]; then
 	sed 's/XXXX/15015/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'theorionexperience' ]; then
 	sed 's/XXXX/15016/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'drtmnyc' ]; then
+	sed 's/XXXX/15017/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
