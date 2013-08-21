@@ -157,7 +157,7 @@ nmap <leader>e :nohls<CR>
 
 " Toggle plugins
 nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>r :TMiniBufExplorer<CR>
+nmap <leader>r :MBEToggle<CR>
 "nmap <leader>c :CtrlP<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
