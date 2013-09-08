@@ -7,23 +7,15 @@ if which gtail >/dev/null; then
 	alias tail="gtail"
 fi
 
-# sudo
-zudo="nocorrect sudo"
-
 # Dictionary
 alias dict="dict -d wn"
 
 # GPG
 alias gpgo="gpg2 --symmetric --personal-cipher-preferences "AES256""
 
-# RWD thumbnail generator for VanPattenMedia.com
-alias vpmrwd="~/.dotfiles/scripts/generate-rwd.sh"
-alias t="~/.dotfiles/scripts/tmux.sh"
-
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/.dotfiles/ipfw/ipfw.sh"
-alias dnsf="dscacheutil -flushcache"
 alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 
 # Vim

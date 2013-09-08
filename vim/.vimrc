@@ -18,7 +18,6 @@ Bundle 'vim-scripts/bufkill.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 
 
@@ -120,8 +119,6 @@ colorscheme solarized
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
 
-call togglebg#map("<F5>")
-
 " Nicer invisible characters
 set listchars=tab:▸\ ,eol:¬,trail:·
 
@@ -158,7 +155,6 @@ nmap <leader>e :nohls<CR>
 " Toggle plugins
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :MBEToggle<CR>
-"nmap <leader>c :CtrlP<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
 
