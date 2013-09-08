@@ -39,8 +39,6 @@ this=$(hostname)
 
 if [[ $this == "cvp" ]]; then
 	source $DOTFILES/aliases/cvp
-elif [[ $this == "cvp-server" ]]; then
-	source $DOTFILES/aliases/cvp-server
 elif [[ $this == "pongo.vanpattenmedia.com" ]]; then
 	source $DOTFILES/aliases/pongo.vanpattenmedia.com
 fi
