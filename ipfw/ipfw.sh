@@ -43,6 +43,10 @@ elif [ $1 == 'drtmnyc' ]; then
 	sed 's/XXXX/15017/' ipfw.template.conf > ipfw.conf
 elif [ $1 == 'darylroththeatre' ]; then
 	sed 's/XXXX/15018/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'actortherapynyc' ]; then
+	sed 's/XXXX/15019/' ipfw.template.conf > ipfw.conf
+elif [ $1 == 'lindseykyler' ]; then
+	sed 's/XXXX/15020/' ipfw.template.conf > ipfw.conf
 fi
 
 # Reload ipfw
