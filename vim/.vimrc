@@ -55,6 +55,7 @@ Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'rodnaph/jinja.vim'
 
 " Enable plugin indentation
 filetype plugin indent on
@@ -69,17 +70,21 @@ autocmd FileType scss setlocal sw=4 ts=4
 " CSS
 autocmd FileType css setlocal sw=4 ts=4
 
+" HTML
+autocmd FileType html setlocal sw=4 ts=4
+
 " JavaScript
 autocmd FileType javascript setlocal sw=4 ts=4
 
 " PHP
 autocmd FileType php setlocal sw=4 ts=4
 
-" HTML
-autocmd FileType html setlocal sw=4 ts=4
-
 " Ruby
 autocmd FileType ruby setlocal et sw=2 ts=2 sts=2
+
+" Twig
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+autocmd FileType htmljinja setlocal sw=4 ts=4
 
 
 " =====================
