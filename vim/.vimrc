@@ -116,8 +116,6 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " ===================
 
 syntax enable    " Syntax highlighting
-set number       " Show line numbers
-set rnu          " Relative line numbers
 set cursorline   " Highlight current line
 set so=5         " Keep the cursor in the middle (ish)
 set showmatch    " Brackets/braces: highlight match
