@@ -23,6 +23,9 @@ alias gak="git add -A && git commit"
 alias glo="git lg"
 alias gd="git diff"
 
+# Vim alias
+alias v="vim"
+
 # Server aliases
 alias cruella="ssh -p 4732 chris@cruella"
 alias pongo="ssh -p 9012 chris@pongo"

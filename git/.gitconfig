@@ -1,6 +1,7 @@
 [user]
 	name = Chris Van Patten
 	email = chris@vanpattenmedia.com
+	signingkey = 76D41F8F
 [github]
 	user = chrisvanpatten
 [alias]
