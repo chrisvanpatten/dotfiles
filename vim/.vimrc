@@ -32,9 +32,9 @@ let NERDTreeShowLineNumbers = 1
 let NERDTreeWinPos = "right"
 let NERDTreeIgnore = ['\.DS_Store$']
 
-" zencoding-vim
-let g:user_zen_expandabbr_key = '<S-Tab>'
-let g:user_zen_settings = {
+" emmet-vim
+let g:user_emmet_expandabbr_key = '<S-Tab>'
+let g:user_emmet_settings = {
   \ 'indentation' : '	'
   \ }
 
@@ -44,6 +44,9 @@ let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'wp',
   \ }
+
+" numbers.vim
+let g:numbers_exclude = []
 
 
 " ============
