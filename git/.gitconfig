@@ -11,7 +11,7 @@
 	excludesfile = ~/.dotfiles/git/.gitignore
 [diff]
 	external = ~/.dotfiles/git/git-diff-wrapper.sh
-	tool = diffmerge
+	tool = opendiff
 [pager]
 	diff =
 [push]
