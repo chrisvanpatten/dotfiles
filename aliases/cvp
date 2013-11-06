@@ -15,7 +15,7 @@ alias gpgo="gpg2 --symmetric --personal-cipher-preferences "AES256""
 
 # Webdev
 alias magic="bundle exec guard"
-alias launch="sh ~/.dotfiles/ipfw/ipfw.sh"
+alias launch="sh ~/.dotfiles/pfctl/pfctl.sh"
 alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 
 # Vim
