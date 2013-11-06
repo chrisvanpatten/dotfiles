@@ -117,6 +117,8 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 
 syntax enable    " Syntax highlighting
 set cursorline   " Highlight current line
+set number
+set rnu
 set so=5         " Keep the cursor in the middle (ish)
 set showmatch    " Brackets/braces: highlight match
 set laststatus=0 " Disable statusline

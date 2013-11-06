@@ -1,5 +1,5 @@
 # Set up the environment
-ZSH="$HOME/.oh-my-zsh"
+ZSH="$HOME/.dotfiles/zsh/.oh-my-zsh"
 DOTFILES="$HOME/.dotfiles"
 
 # PATH
