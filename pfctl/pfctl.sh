@@ -25,7 +25,7 @@ elif [ $1 == 'testsite' ]; then
 	sed 's/XXXX/15008/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'pagecraft' ]; then
 	sed 's/XXXX/15009/' com.vanpattenmedia.template > com.vanpattenmedia
-elif [ $1 == 'gents' ]; then
+elif [ $1 == 'gentlemenofstjohns' ]; then
 	sed 's/XXXX/15010/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'offbroadway' ]; then
 	sed 's/XXXX/15011/' com.vanpattenmedia.template > com.vanpattenmedia
@@ -47,6 +47,8 @@ elif [ $1 == 'actortherapynyc' ]; then
 	sed 's/XXXX/15019/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'lindseykyler' ]; then
 	sed 's/XXXX/15020/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'chrisvanpatten' ]; then
+	sed 's/XXXX/15021/' com.vanpattenmedia.template > com.vanpattenmedia
 fi
 
 # Reload pfctl
