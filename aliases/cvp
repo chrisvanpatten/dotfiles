@@ -22,3 +22,4 @@ alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/sec
 alias vim="mvim"
 alias mvim="mvim -fv"
 alias vimdiff="mvimdiff -fv"
+alias vi="vim"
