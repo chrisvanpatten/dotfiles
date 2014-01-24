@@ -23,3 +23,6 @@ alias vim="mvim"
 alias mvim="mvim -fv"
 alias vimdiff="mvimdiff -fv"
 alias vi="vim"
+
+# Scripts
+alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"

@@ -19,6 +19,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 
 
 " ========================
@@ -42,9 +43,9 @@ let g:user_emmet_settings = {
 let g:ctrlp_map = '<leader>c'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = ''
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'wp',
-  \ }
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir': 'wp',
+"  \ }
 
 " numbers.vim
 let g:numbers_exclude = []
