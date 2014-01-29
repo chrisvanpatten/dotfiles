@@ -11,7 +11,8 @@ fi
 alias dict="dict -d wn"
 
 # GPG
-alias gpgo="gpg2 --symmetric --personal-cipher-preferences "AES256""
+alias gpg-encrypt="gpg2 --symmetric --personal-cipher-preferences "AES256""
+alias gpg-decrypt="gpg2"
 
 # Webdev
 alias magic="bundle exec guard"
