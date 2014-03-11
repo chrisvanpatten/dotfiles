@@ -55,6 +55,8 @@ elif [ $1 == 'markjwilliamsdesign' ]; then
 	sed 's/XXXX/15023/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'tildivorcethemusical' ]; then
 	sed 's/XXXX/15024/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'brycepinkham' ]; then
+	sed 's/XXXX/15025/' com.vanpattenmedia.template > com.vanpattenmedia
 fi
 
 # Reload pfctl

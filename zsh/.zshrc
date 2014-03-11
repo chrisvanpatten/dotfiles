@@ -12,7 +12,7 @@ PATH="$PATH:$HOME/.rvm/bin"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(git osx cap bundler gem zsh-syntax-highlighting)
+plugins=(git osx cap gem zsh-syntax-highlighting)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
