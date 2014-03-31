@@ -20,6 +20,7 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'editorconfig/editorconfig-vim'
 
 
 " ========================
@@ -61,6 +62,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'rodnaph/jinja.vim'
+Bundle 'xsbeats/vim-blade'
 
 " Enable plugin indentation
 filetype plugin indent on
