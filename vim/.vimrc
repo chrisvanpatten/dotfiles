@@ -43,6 +43,7 @@ let g:user_emmet_settings = {
 " ctrlp
 let g:ctrlp_map = '<leader>c'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'public/wp/\|public/assets',
