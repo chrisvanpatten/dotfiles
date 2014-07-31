@@ -17,6 +17,7 @@ alias gpg-decrypt="gpg2"
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/.dotfiles/pfctl/pfctl.sh"
+alias wpframe="sh ~/.dotfiles/scripts/wpframe"
 alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 
 # Vim
@@ -24,6 +25,10 @@ alias vim="mvim"
 alias mvim="mvim -fv"
 alias vimdiff="mvimdiff -fv"
 alias vi="vim"
+
+# tmux
+alias tn="tmux new -s"
+alias tl="tmux attach -t"
 
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"
