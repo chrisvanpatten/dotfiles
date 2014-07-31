@@ -17,7 +17,7 @@ elif [ $1 == 'carbonview' ]; then
 	sed 's/XXXX/8093/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'coachmenyc' ]; then
 	sed 's/XXXX/15005/' com.vanpattenmedia.template > com.vanpattenmedia
-elif [ $1 == 'newvpm' ]; then
+elif [ $1 == 'saraelizabethmusic' ]; then
 	sed 's/XXXX/15006/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'oneregionforward' ]; then
 	sed 's/XXXX/15007/' com.vanpattenmedia.template > com.vanpattenmedia
@@ -61,6 +61,16 @@ elif [ $1 == 'gardellaandassociates' ]; then
 	sed 's/XXXX/15026/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'amritahealthfoods' ]; then
 	sed 's/XXXX/15027/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'haroldsanditen' ]; then
+	sed 's/XXXX/15028/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'presenters' ]; then
+	sed 's/XXXX/15029/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'blastofftest' ]; then
+	sed 's/XXXX/15030/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'lbi' ]; then
+	sed 's/XXXX/15031/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'blastoffapp' ]; then
+	sed 's/XXXX/15032/' com.vanpattenmedia.template > com.vanpattenmedia
 fi
 
 # Reload pfctl

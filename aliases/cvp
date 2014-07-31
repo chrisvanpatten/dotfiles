@@ -17,7 +17,7 @@ alias gpg-decrypt="gpg2"
 # Webdev
 alias magic="bundle exec guard"
 alias launch="sh ~/.dotfiles/pfctl/pfctl.sh"
-alias wpframe="sh ~/.dotfiles/scripts/wpframe"
+alias vpmframe-wp="sh ~/.dotfiles/scripts/vpmframe-wp"
 alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 
 # Vim

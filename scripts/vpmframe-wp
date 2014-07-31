@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Create a vpmframe-wp project
+
+mkdir $1
+cd $1
+
+git init
+
+touch vpmframe-wp
+
+git add vpmframe-wp
+
+git commit -m 'Initial commit'
+
+git remote add vpmframe-wp git@github.com:vanpattenmedia/wpframe.git
+
+git fetch vpmframe-wp
+
+git merge --squash vpmframe-wp/master
+
+rm vpmframe-wp
+
+mv config/database.example.yml config/database.yml
+
+echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> config/wp-salts.php
+
+git remote rm vpmframe-wp
+
+git add -A .
+
+git commit --no-edit
