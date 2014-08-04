@@ -71,6 +71,8 @@ elif [ $1 == 'lbi' ]; then
 	sed 's/XXXX/15031/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'blastoffapp' ]; then
 	sed 's/XXXX/15032/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'stalkingthebogeyman' ]; then
+	sed 's/XXXX/15033/' com.vanpattenmedia.template > com.vanpattenmedia
 fi
 
 # Reload pfctl
