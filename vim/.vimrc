@@ -32,7 +32,7 @@ let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeShowLineNumbers = 1
 let NERDTreeWinPos = "right"
-let NERDTreeIgnore = ['\.DS_Store$']
+let NERDTreeIgnore = [ '\.DS_Store$', '\.sass-cache$', '\.vagrant$' ]
 
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<S-Tab>'
@@ -46,7 +46,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'public/wp/\|public/assets',
+  \ 'dir': 'public/wp/\|public/assets\|node_modules/',
   \ }
 
 " numbers.vim
