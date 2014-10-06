@@ -29,6 +29,7 @@ alias vi="vim"
 # tmux
 alias tn="tmux new -s"
 alias tl="tmux attach -t"
+alias tls="tmux ls"
 
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"

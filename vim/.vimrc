@@ -90,6 +90,9 @@ autocmd FileType php setlocal sw=4 ts=4
 " Ruby
 autocmd FileType ruby setlocal et sw=2 ts=2 sts=2
 
+" YAML
+autocmd FileType yaml setlocal et sw=2 ts=2 sts=2
+
 " Twig
 au BufRead,BufNewFile *.twig set filetype=htmljinja
 autocmd FileType htmljinja setlocal sw=4 ts=4
@@ -129,7 +132,7 @@ set showmatch    " Brackets/braces: highlight match
 set laststatus=0 " Disable statusline
 
 " solarized
-set background=dark
+set background=light
 colorscheme solarized
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
@@ -167,11 +170,15 @@ nmap <leader>l :set list!<CR>
 " Disable search result highlighting
 nmap <leader>e :nohls<CR>
 
+" Toggle paste mode
+set pastetoggle=<leader>x
+
 " Toggle plugins
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :MBEToggle<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
+call togglebg#map("<leader>q")
 
 
 " =============
