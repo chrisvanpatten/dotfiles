@@ -13,7 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
-Bundle 'fholgado/minibufexpl.vim'
+Bundle 'ap/vim-buftabline'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'myusuf3/numbers.vim'
@@ -51,6 +51,11 @@ let g:ctrlp_custom_ignore = {
 
 " numbers.vim
 let g:numbers_exclude = []
+
+" buftabline
+let g:buftabline_show = 1
+let g:buftabline_indicators = 1
+let g:buftabline_numbers = 1
 
 
 " ============
@@ -132,7 +137,7 @@ set showmatch    " Brackets/braces: highlight match
 set laststatus=0 " Disable statusline
 
 " solarized
-set background=light
+set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
@@ -175,7 +180,6 @@ set pastetoggle=<leader>x
 
 " Toggle plugins
 nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>r :MBEToggle<CR>
 nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
 call togglebg#map("<leader>q")
