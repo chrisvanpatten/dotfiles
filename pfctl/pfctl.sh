@@ -79,6 +79,10 @@ elif [ $1 == 'musicglove' ]; then
 	sed 's/XXXX/15035/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'myblastoffapp' ]; then
 	sed 's/XXXX/15036/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'packages' ]; then
+	sed 's/XXXX/15037/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'nativemate' ]; then
+	sed 's/XXXX/15038/' com.vanpattenmedia.template > com.vanpattenmedia
 fi
 
 # Reload pfctl
