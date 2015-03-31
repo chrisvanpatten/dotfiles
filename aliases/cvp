@@ -31,5 +31,11 @@ alias tn="tmux new -s"
 alias tl="tmux attach -t"
 alias tls="tmux ls"
 
+# Vagrant
+alias vs="vagrant status"
+alias vu="vagrant up"
+alias vh="vagrant halt"
+alias vd="vagrant suspend"
+
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"
