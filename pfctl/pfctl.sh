@@ -75,7 +75,7 @@ elif [ $1 == 'stalkingthebogeyman' ]; then
 	sed 's/XXXX/15033/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'wiesenthaltheplay' ]; then
 	sed 's/XXXX/15034/' com.vanpattenmedia.template > com.vanpattenmedia
-elif [ $1 == 'musicglove' ]; then
+elif [ $1 == 'flintrehab' ]; then
 	sed 's/XXXX/15035/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'myblastoffapp' ]; then
 	sed 's/XXXX/15036/' com.vanpattenmedia.template > com.vanpattenmedia
