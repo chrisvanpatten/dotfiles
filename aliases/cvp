@@ -40,3 +40,6 @@ alias vd="vagrant suspend"
 
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"
+
+# Misc.
+alias start_elasticsearch="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
