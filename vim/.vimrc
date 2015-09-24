@@ -1,5 +1,6 @@
 set nocompatible
 set encoding=utf-8
+filetype off
 
 
 " ===========
@@ -7,20 +8,33 @@ set encoding=utf-8
 " ===========
 
 " Set up vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ap/vim-buftabline'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'editorconfig/editorconfig-vim'
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ap/vim-buftabline'
+Plugin 'vim-scripts/bufkill.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'editorconfig/editorconfig-vim'
+
+" Syntaxes
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-markdown'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'rodnaph/jinja.vim'
+Plugin 'xsbeats/vim-blade'
+
+call vundle#end()
 
 
 " ========================
@@ -61,14 +75,6 @@ let g:buftabline_numbers = 1
 " ============
 " = Syntaxes =
 " ============
-
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'rodnaph/jinja.vim'
-Bundle 'xsbeats/vim-blade'
 
 " Enable plugin indentation
 filetype plugin indent on
