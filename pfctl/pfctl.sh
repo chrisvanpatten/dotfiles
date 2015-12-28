@@ -6,7 +6,7 @@
 cd ~/.dotfiles/pfctl
 
 if [ $1 == 'vanpattenmedia' ]; then
-	sed 's/XXXX/15000/' com.vanpattenmedia.template > com.vanpattenmedia
+	sed -e 's/XXXX/15000/' -e 's/YYYY/16000/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 elif [ $1 == 'lmlmusic' ]; then
 	sed 's/XXXX/15001/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'amazinggracevineyard' ]; then
@@ -91,6 +91,14 @@ elif [ $1 == 'fhapp' ]; then
 	sed -e 's/XXXX/15041/' -e 's/YYYY/16041/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 elif [ $1 == 'fhsit' ]; then
 	sed -e 's/XXXX/15042/' -e 's/YYYY/16042/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
+elif [ $1 == 'altonhouse' ]; then
+	sed 's/XXXX/15043/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'notarealjob' ]; then
+	sed 's/XXXX/15044/' com.vanpattenmedia.template > com.vanpattenmedia
+elif [ $1 == 'sakuseibox' ]; then
+	sed -e 's/XXXX/15045/' -e 's/YYYY/16045/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
+elif [ $1 == 'chatdart' ]; then
+	sed -e 's/XXXX/15046/' -e 's/YYYY/16046/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 fi
 
 # Reload pfctl
