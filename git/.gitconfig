@@ -32,10 +32,8 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = diffmerge
-[mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+	external = ~/.dotfiles/git/git-diff-wrapper.sh
+	tool = vimdiff
+[mergetool]
+	prompt = false
