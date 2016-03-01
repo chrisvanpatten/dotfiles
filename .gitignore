@@ -1,4 +1,5 @@
 .private
+.harvest.json
 .tmux.custom
 .netrwhist
 ipfw.conf
