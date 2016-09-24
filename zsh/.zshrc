@@ -11,7 +11,7 @@ PATH="$PATH:$HOME/.rvm/bin"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(cap zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
@@ -25,15 +25,11 @@ export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
 # php-version
-source $(brew --prefix php-version)/php-version.sh && php-version 5
+# source $(brew --prefix php-version)/php-version.sh && php-version 5
 
 
 # dircolors
-if which gdircolors >/dev/null; then
-	eval `gdircolors $DOTFILES/dircolors/dircolors.ansi-universal`
-else
-	eval `dircolors $DOTFILES/dircolors/dircolors.ansi-universal`
-fi
+eval `gdircolors $DOTFILES/dircolors/dircolors.ansi-universal`
 
 # oh-my-zsh! Include me before you include aliases
 source $ZSH/oh-my-zsh.sh
@@ -41,15 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 [[ -s "$DOTFILES/aliases/.aliases" ]] && source $DOTFILES/aliases/.aliases
 [[ -s "$DOTFILES/aliases/.private" ]] && source $DOTFILES/aliases/.private
-
-# Host-name specific operations
-this=$(hostname)
-
-if [[ $this == "cvp" ]]; then
-	source $DOTFILES/aliases/cvp
-elif [[ $this == "pongo.vanpattenmedia.com" ]]; then
-	source $DOTFILES/aliases/pongo.vanpattenmedia.com
-fi
+[[ -s "$DOTFILES/aliases/.cvp" ]] && source $DOTFILES/aliases/.cvp
 
 # Set EDITOR
 export EDITOR="vim"
