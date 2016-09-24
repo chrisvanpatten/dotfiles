@@ -15,12 +15,14 @@ fi
 alias l='ls -lah'
 
 # Git Aliases
+alias ga="git add"
 alias gs="git status"
 alias gp="git push"
 alias gc="git commit"
 alias gk="git commit"
 alias gpa="git push --all"
 alias gu="git checkout"
+alias gcb="git checkout -b"
 alias gak="git add -A && git commit"
 alias glo="git lg"
 alias gd="git diff"

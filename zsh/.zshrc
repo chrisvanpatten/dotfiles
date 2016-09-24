@@ -3,7 +3,6 @@ ZSH="$HOME/.dotfiles/zsh/.oh-my-zsh"
 DOTFILES="$HOME/.dotfiles"
 
 # PATH
-PATH="$HOME/Android/platform-tools:$PATH"
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
@@ -12,13 +11,22 @@ PATH="$PATH:$HOME/.rvm/bin"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(git osx cap gem zsh-syntax-highlighting)
+plugins=(cap zsh-syntax-highlighting)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
 
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# nvm
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
+# php-version
+source $(brew --prefix php-version)/php-version.sh && php-version 5
+
 
 # dircolors
 if which gdircolors >/dev/null; then

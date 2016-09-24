@@ -39,12 +39,16 @@ if (curl_errno($ch)) {
 
   foreach($data["day_entries"] as $entry) {
     $project = $entry["project"];
-    $formattedProject = (strlen($project) > 15) ? substr($project,0,15).'' : $project;
 
     if ( array_key_exists("timer_started_at", $entry) ) {
       $timer_running = true;
-      $hour = $entry["hours"];
-      echo "$formattedProject - $hour";
+
+      $decimal = $entry["hours"];
+	  $hours   = floor( $decimal );
+      $minutes = round( 60 * ( $decimal - $hours ) );
+      $time    = str_pad( $hours, 2, "0", STR_PAD_LEFT ) . ":" . str_pad( $minutes, 2, "0", STR_PAD_LEFT );
+
+      echo "$project - $time";
     } 
   }
 

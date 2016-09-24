@@ -32,6 +32,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodnaph/jinja.vim'
+Plugin 'jwalton512/vim-blade'
 
 call vundle#end()
 

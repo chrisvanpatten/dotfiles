@@ -20,6 +20,7 @@ alias launch="sh ~/.dotfiles/pfctl/pfctl.sh"
 alias vpmframe-wp="sh ~/.dotfiles/scripts/vpmframe-wp"
 alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 alias flushdns="sudo discoveryutil udnsflushcaches"
+alias pvm="php-version"
 
 # Vim
 alias vim="mvim"
