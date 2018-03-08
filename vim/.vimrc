@@ -47,6 +47,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeShowLineNumbers = 1
 let NERDTreeWinPos = "right"
 let NERDTreeIgnore = [ '\.DS_Store$', '\.sass-cache$', '\.vagrant$' ]
+let NERDTreeCascadeSingleChildDir = 0
+let NERDTreeCascadeOpenSingleChildDir = 0
 
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<S-Tab>'
@@ -58,9 +60,10 @@ let g:user_emmet_settings = {
 let g:ctrlp_map = '<leader>c'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'public/wp/\|public/assets\|node_modules/\|platforms/ios\|tmp/cache',
+  \ 'dir': 'public/wp/\|public/assets\|node_modules/\|platforms/ios\|tmp/cache\|.git\|.sass-cache\|.vagrant',
   \ }
 
 " numbers.vim
@@ -70,6 +73,16 @@ let g:numbers_exclude = []
 let g:buftabline_show = 1
 let g:buftabline_indicators = 1
 let g:buftabline_numbers = 1
+
+
+" =========
+" = netrw =
+" =========
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
 
 " ============
@@ -171,6 +184,10 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Allow using . to repeat a command over a multiline
+" selection while in visual mode
+vnoremap . :normal .<CR>
 
 " Remap leader
 let mapleader = ","

@@ -6,7 +6,11 @@ DOTFILES="$HOME/.dotfiles"
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/go/bin:$PATH"
 PATH="$PATH:$HOME/.rvm/bin"
+PATH="$HOME/.cargo/bin:$PATH"
+PATH="/Applications/Genymotion.app/Contents/MacOS/tools:$PATH"
+PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # oh-my-zsh config
 ZSH_THEME="sunrise"
@@ -18,15 +22,17 @@ export TERM=xterm-256color # 256 color terminal
 
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source $HOME/.dotfiles/scripts/lazy-rvm
 
 # nvm
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+source $HOME/.dotfiles/scripts/lazy-nvm
 
 # php-version
-# source $(brew --prefix php-version)/php-version.sh && php-version 5
+#source $(brew --prefix php-version)/php-version.sh && php-version 5
 
+
+# Go
+export GOPATH=$HOME/Websites/Projects/go
 
 # dircolors
 eval `gdircolors $DOTFILES/dircolors/dircolors.ansi-universal`

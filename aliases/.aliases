@@ -21,4 +21,3 @@ alias v="vim"
 # Server aliases
 alias cruella="ssh -p 4732 chris@cruella"
 alias pongo="ssh -p 9012 chris@pongo"
-alias go="ssh -p 7588 chris@go.cvp.me"

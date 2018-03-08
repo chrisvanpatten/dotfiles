@@ -1,0 +1,11 @@
+RUBY_GLOBALS+=("ruby")
+RUBY_GLOBALS+=("rvm")
+RUBY_GLOBALS+=("bundle")
+
+load_rvm () {
+	. "$HOME/.rvm/scripts/rvm"
+}
+
+for cmd in "${RUBY_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${RUBY_GLOBALS}; load_rvm; ${cmd} \$@ }"
+done

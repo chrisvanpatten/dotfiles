@@ -49,8 +49,6 @@ elif [ $1 == 'lindseykyler' ]; then
 	sed 's/XXXX/15020/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'chrisvanpatten' ]; then
 	sed 's/XXXX/15021/' com.vanpattenmedia.template > com.vanpattenmedia
-elif [ $1 == 'torrentfreak' ]; then
-	sed 's/XXXX/15022/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'markjwilliamsdesign' ]; then
 	sed 's/XXXX/15023/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'tildivorcethemusical' ]; then
@@ -97,14 +95,10 @@ elif [ $1 == 'notarealjob' ]; then
 	sed 's/XXXX/15044/' com.vanpattenmedia.template > com.vanpattenmedia
 elif [ $1 == 'sakuseibox' ]; then
 	sed -e 's/XXXX/15045/' -e 's/YYYY/16045/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
-elif [ $1 == 'chatwire' ]; then
-	sed -e 's/XXXX/15046/' -e 's/YYYY/16046/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 elif [ $1 == 'natrespro' ]; then
 	sed -e 's/XXXX/15047/' -e 's/YYYY/16047/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 elif [ $1 == 'heartland' ]; then
 	sed -e 's/XXXX/15048/' -e 's/YYYY/16048/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
-elif [ $1 == 'ecf' ]; then
-	sed -e 's/XXXX/15049/' -e 's/YYYY/16049/' com.vanpattenmedia.template-ssl > com.vanpattenmedia
 fi
 
 # Reload pfctl
