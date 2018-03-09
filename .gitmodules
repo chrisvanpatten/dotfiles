@@ -7,3 +7,6 @@
 [submodule "dircolors"]
 	path = dircolors
 	url = git://github.com/seebi/dircolors-solarized.git
+[submodule "zsh/omz-custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/omz-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

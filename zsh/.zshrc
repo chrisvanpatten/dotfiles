@@ -14,6 +14,7 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # oh-my-zsh config
 ZSH_THEME="sunrise"
+ZSH_CUSTOM=$DOTFILES/zsh/omz-custom
 DISABLE_AUTO_UPDATE=true
 plugins=(
 	zsh-syntax-highlighting
