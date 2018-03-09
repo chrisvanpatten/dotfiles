@@ -21,3 +21,20 @@ alias v="vim"
 # Server aliases
 alias cruella="ssh -p 4732 chris@cruella"
 alias pongo="ssh -p 9012 chris@pongo"
+
+# tmux
+alias tn="tmux new -s"
+alias tl="tmux attach -t"
+alias tls="tmux ls"
+
+# Vagrant
+alias vs="vagrant status"
+alias vu="vagrant up"
+alias vh="vagrant halt"
+alias vd="vagrant suspend"
+
+# Dev
+alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
+
+# Dictionary
+alias dict="dict -d wn"

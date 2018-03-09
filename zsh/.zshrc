@@ -15,17 +15,19 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # oh-my-zsh config
 ZSH_THEME="sunrise"
 DISABLE_AUTO_UPDATE=true
-plugins=(zsh-syntax-highlighting)
+plugins=(
+	zsh-syntax-highlighting
+)
 
 # Shell Settings
 export TERM=xterm-256color # 256 color terminal
 
 
 # rvm
-source $HOME/.dotfiles/scripts/lazy-rvm
+source $DOTFILES/scripts/lazy-rvm
 
 # nvm
-source $HOME/.dotfiles/scripts/lazy-nvm
+source $DOTFILES/scripts/lazy-nvm
 
 # php-version
 #source $(brew --prefix php-version)/php-version.sh && php-version 5
@@ -41,9 +43,8 @@ eval `gdircolors $DOTFILES/dircolors/dircolors.ansi-universal`
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-[[ -s "$DOTFILES/aliases/.aliases" ]] && source $DOTFILES/aliases/.aliases
-[[ -s "$DOTFILES/aliases/.private" ]] && source $DOTFILES/aliases/.private
-[[ -s "$DOTFILES/aliases/.cvp" ]] && source $DOTFILES/aliases/.cvp
+source $DOTFILES/aliases/.aliases
+source $DOTFILES/aliases/.cvp
 
 # Set EDITOR
 export EDITOR="vim"

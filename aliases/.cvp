@@ -7,18 +7,11 @@ if which gtail >/dev/null; then
 	alias tail="gtail"
 fi
 
-# Dictionary
-alias dict="dict -d wn"
-
 # GPG
 alias gpg-encrypt="gpg2 --symmetric --personal-cipher-preferences "AES256""
 alias gpg-decrypt="gpg2"
 
 # Webdev
-alias magic="bundle exec guard"
-alias launch="sh ~/.dotfiles/pfctl/pfctl.sh"
-alias vpmframe-wp="sh ~/.dotfiles/scripts/vpmframe-wp"
-alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/secret-key/1.1/salt >> wp-salts.php"
 alias flushdns="sudo discoveryutil udnsflushcaches"
 alias pvm="php-version"
 
@@ -26,18 +19,7 @@ alias pvm="php-version"
 alias vim="mvim"
 alias mvim="mvim -fv"
 alias vimdiff="mvimdiff -fv"
-alias vi="vim"
-
-# tmux
-alias tn="tmux new -s"
-alias tl="tmux attach -t"
-alias tls="tmux ls"
-
-# Vagrant
-alias vs="vagrant status"
-alias vu="vagrant up"
-alias vh="vagrant halt"
-alias vd="vagrant suspend"
+alias vi="mvim"
 
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"
