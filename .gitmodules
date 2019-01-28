@@ -1,12 +1,12 @@
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule "vim/.vim/bundle/vundle"]
 	path = vim/.vim/bundle/Vundle.vim
-	url = git://github.com/VundleVim/Vundle.vim.git
+	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "dircolors"]
 	path = dircolors
-	url = git://github.com/seebi/dircolors-solarized.git
+	url = git@github.com:seebi/dircolors-solarized.git
 [submodule "zsh/omz-custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/omz-custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git

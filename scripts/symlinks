@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ln -fs ~/.dotfiles/ack/.ackrc
+ln -fs ~/.dotfiles/gems/.gemrc
+ln -fs ~/.dotfiles/git/.gitconfig
+ln -fs ~/.dotfiles/.profile
+ln -fs ~/.dotfiles/tmux/.tmux.conf
+ln -fs ~/.dotfiles/vim/.vim
+ln -fs ~/.dotfiles/vim/.vimrc
+ln -fs ~/.dotfiles/zsh/.zshrc
