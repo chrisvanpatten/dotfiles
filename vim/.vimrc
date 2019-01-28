@@ -29,6 +29,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodnaph/jinja.vim'
@@ -49,6 +50,7 @@ let NERDTreeWinPos = "right"
 let NERDTreeIgnore = [ '\.DS_Store$', '\.sass-cache$', '\.vagrant$' ]
 let NERDTreeCascadeSingleChildDir = 0
 let NERDTreeCascadeOpenSingleChildDir = 0
+let NERDTreeWinSize = 35
 
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<S-Tab>'
@@ -63,7 +65,7 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'public/wp/\|public/assets\|node_modules/\|platforms/ios\|tmp/cache\|.git\|.sass-cache\|.vagrant',
+  \ 'dir': 'vendor\|public/wp\|build\|public/assets\|node_modules\|platforms/ios\|tmp/cache\|.git\|.sass-cache\|.vagrant',
   \ }
 
 " numbers.vim

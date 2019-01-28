@@ -1,6 +1,6 @@
 # ls
 if which gls >/dev/null; then
-	alias ls="gls -CF --group-directories-first --color=auto"
+	alias ls="gls -aCF --group-directories-first --color=auto"
 fi
 
 if which gtail >/dev/null; then
