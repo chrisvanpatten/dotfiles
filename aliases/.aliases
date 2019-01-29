@@ -39,3 +39,22 @@ alias wpsalts="echo '<?php' > wp-salts.php && curl https://api.wordpress.org/sec
 
 # Dictionary
 alias dict="dict -d wn"
+
+# GPG
+alias gpg-encrypt="gpg2 --symmetric --personal-cipher-preferences "AES256""
+alias gpg-decrypt="gpg2"
+
+# Vim
+alias vim="mvim"
+alias mvim="mvim -fv"
+alias vimdiff="mvimdiff -fv"
+alias vi="mvim"
+
+# Support using homebrew-provided unix tools, if available
+if which gls >/dev/null; then
+	alias ls="gls -aCF --group-directories-first --color=auto"
+fi
+
+if which gtail >/dev/null; then
+	alias tail="gtail"
+fi

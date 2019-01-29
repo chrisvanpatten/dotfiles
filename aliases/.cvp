@@ -1,25 +1,6 @@
-# ls
-if which gls >/dev/null; then
-	alias ls="gls -aCF --group-directories-first --color=auto"
-fi
-
-if which gtail >/dev/null; then
-	alias tail="gtail"
-fi
-
-# GPG
-alias gpg-encrypt="gpg2 --symmetric --personal-cipher-preferences "AES256""
-alias gpg-decrypt="gpg2"
-
 # Webdev
 alias flushdns="sudo discoveryutil udnsflushcaches"
 alias pvm="php-version"
-
-# Vim
-alias vim="mvim"
-alias mvim="mvim -fv"
-alias vimdiff="mvimdiff -fv"
-alias vi="mvim"
 
 # Scripts
 alias tmux-session="bash ~/.dotfiles/scripts/tmux-session"

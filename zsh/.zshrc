@@ -1,6 +1,7 @@
 # Set up the environment
 ZSH="$HOME/.dotfiles/zsh/.oh-my-zsh"
 DOTFILES="$HOME/.dotfiles"
+HOSTNAME="$(hostname)"
 
 # PATH
 PATH="/usr/local/mysql/bin:$PATH"
@@ -47,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 source $DOTFILES/aliases/.aliases
-source $DOTFILES/aliases/.cvp
+source $DOTFILES/aliases/.$HOSTNAME 2> /dev/null
 
 # Set EDITOR
 export EDITOR="vim"
