@@ -1,0 +1,19 @@
+#! /bin/bash
+
+# Hacky script for a strangely broken user font directory
+
+# Remove the user font directory
+sudo rm -rf $HOME/Library/Fonts
+mkdir -p $HOME/Library/Fonts
+
+# Create a temp directory for the fonts
+MESLO_TMP_DIR=`mktemp -d -t 'meslo'`
+
+# Unzip the fonts
+unzip $HOME/.dotfiles/fonts/meslo/dist/v1.2.1/Meslo\ LG\ DZ\ v1.2.1.zip -d $MESLO_TMP_DIR
+
+# Move them to the user font directory
+mv $MESLO_TMP_DIR/Meslo\ LG\ DZ\ v1.2.1/*.ttf $HOME/Library/Fonts/.
+
+# Remove the temp directory
+rm -rf $MESLO_TMP_DIR
