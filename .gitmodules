@@ -10,3 +10,6 @@
 [submodule "zsh/omz-custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/omz-custom/plugins/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "fonts/meslo"]
+	path = fonts/meslo
+	url = git@github.com:andreberg/Meslo-Font.git
