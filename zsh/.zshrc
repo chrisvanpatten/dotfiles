@@ -13,6 +13,7 @@ PATH="$HOME/.rvm/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="/Applications/Genymotion.app/Contents/MacOS/tools:$PATH"
 PATH="$HOME/.yarn/bin:$PATH"
+PATH="$HOME/.composer/vendor/bin:$PATH"
 PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # oh-my-zsh config
