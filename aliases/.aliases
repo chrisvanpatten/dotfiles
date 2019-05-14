@@ -53,6 +53,9 @@ alias mvim="mvim -fv"
 alias vimdiff="mvimdiff -fv"
 alias vi="mvim"
 
+# iTerm
+alias tab="open -a iTerm"
+
 # Support using homebrew-provided unix tools, if available
 if which gls >/dev/null; then
 	alias ls="gls -aCF --group-directories-first --color=auto"
