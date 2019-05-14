@@ -99,7 +99,7 @@ autocmd FileType css setlocal sw=4 ts=4
 autocmd FileType html setlocal sw=4 ts=4
 
 " JavaScript
-autocmd FileType javascript setlocal sw=4 ts=4
+autocmd FileType javascript setlocal sw=2 ts=2 expandtab
 
 " PHP
 autocmd FileType php setlocal sw=4 ts=4
