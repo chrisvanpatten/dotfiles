@@ -1,2 +1,5 @@
-alias onewp="docker-compose exec -u wordpress wordpress wp"
+alias onewp='docker-compose exec -u wordpress wordpress wp'
 alias oneup='source .env && eval $(docker-machine env $DOCKER_MACHINE_NAME)'
+
+alias jump='ssh -A cvanpatt@jump.onecms.io'
+alias j='ssh -A cvanpatt@jump.onecms.io'
