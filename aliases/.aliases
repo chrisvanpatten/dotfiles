@@ -33,8 +33,8 @@ alias tls="tmux ls"
 
 # screen
 alias sn="screen -S"
-alias sl="screen -r"
-alias sls=" screen -ls"
+alias sl="screen -x"
+alias sls="screen -ls"
 
 # Vagrant
 alias vs="vagrant status"
