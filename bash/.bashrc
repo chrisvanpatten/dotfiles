@@ -1,3 +1,8 @@
+# Source global definitions, if set
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
 DOTFILES="$HOME/.dotfiles"
 HOSTNAME="$(hostname)"
 
