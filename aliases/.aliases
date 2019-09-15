@@ -48,10 +48,12 @@ alias gpg-encrypt="gpg2 --symmetric --personal-cipher-preferences "AES256""
 alias gpg-decrypt="gpg2"
 
 # Vim
-alias vim="mvim"
-alias mvim="mvim -fv"
-alias vimdiff="mvimdiff -fv"
-alias vi="mvim"
+if which mvim &>/dev/null; then
+	alias vim="mvim"
+	alias mvim="mvim -fv"
+	alias vimdiff="mvimdiff -fv"
+	alias vi="mvim"
+fi
 
 # iTerm
 alias tab="open -a iTerm"
