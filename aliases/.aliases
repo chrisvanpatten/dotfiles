@@ -64,3 +64,10 @@ fi
 if which gtail >/dev/null; then
 	alias tail="gtail"
 fi
+
+# Custom command to create a directory and `cd` into it
+mkd ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
