@@ -1,0 +1,9 @@
+# Set the terminal
+term xterm-256color
+
+# Look and feel
+caption always "%{= bb}%{+b w}%n %t %h %=%l %H %c"
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# Custom escape sequence (to mirror tmux config)
+escape ^Ee
