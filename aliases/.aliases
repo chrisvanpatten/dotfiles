@@ -61,6 +61,8 @@ alias tab="open -a iTerm"
 # Support using homebrew-provided unix tools, if available
 if which gls &>/dev/null; then
 	alias ls="gls -aCF --group-directories-first --color=auto"
+else
+	alias ls="ls -aCF --group-directories-first --color=auto"
 fi
 
 if which gtail &>/dev/null; then
