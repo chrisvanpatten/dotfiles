@@ -1,0 +1,3 @@
+# Improve search history in bash/readline
+"\e[A":history-search-backward
+"\e[B":history-search-forward
