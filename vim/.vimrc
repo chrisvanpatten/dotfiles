@@ -15,26 +15,27 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
 Plugin 'ap/vim-buftabline'
-Plugin 'vim-scripts/bufkill.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'myusuf3/numbers.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-scripts/bufkill.vim'
+Plugin 'vim-vdebug/vdebug'
 
 " Syntaxes
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'jwalton512/vim-blade'
+Plugin 'mxw/vim-jsx'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'rodnaph/jinja.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'rodnaph/jinja.vim'
-Plugin 'jwalton512/vim-blade'
 
 call vundle#end()
 
