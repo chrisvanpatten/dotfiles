@@ -1,7 +1,14 @@
 #!/bin/bash
 
 # Basic dependencies
-brew install zsh coreutils vim nvm php@7.3
+brew install zsh coreutils vim nvm php@7.3 tmux
 
-# Symlink dependencies
-bash ./symlinks
+# Add brew zsh to the shells file
+if grep -q "/usr/local/bin/zsh" /etc/shells; then
+	echo "zsh already in /etc/shells"
+else
+	echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+fi
+
+# Update shell to homebrew zsh
+chsh -s /usr/local/bin/zsh
