@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Basic dependencies
+brew install zsh coreutils vim nvm php@7.3
+
+# Symlink dependencies
+bash ./symlinks
