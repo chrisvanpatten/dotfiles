@@ -141,13 +141,14 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " = Visual Settings =
 " ===================
 
-syntax enable    " Syntax highlighting
-set cursorline   " Highlight current line
+syntax enable      " Syntax highlighting
+set cursorline     " Highlight current line
 set number
 set rnu
-set so=5         " Keep the cursor in the middle (ish)
-set showmatch    " Brackets/braces: highlight match
-set laststatus=0 " Disable statusline
+set so=5           " Keep the cursor in the middle (ish)
+set showmatch      " Brackets/braces: highlight match
+set laststatus=0   " Disable statusline
+set colorcolumn=80 " Mark off column 80
 
 " solarized
 set background=dark
@@ -201,6 +202,9 @@ nmap <leader>1 :NumbersToggle<CR>
 nmap <leader>2 :set invnumber<CR>
 call togglebg#map("<leader>q")
 
+" Work around a strange backspace config 
+" @see https://unix.stackexchange.com/a/307974
+set backspace=indent,eol,start
 
 " =============
 " = Functions =
