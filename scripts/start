@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Basic dependencies
-brew install zsh coreutils vim nvm php@7.3 tmux
+brew install zsh coreutils vim nvm php@7.3 tmux composer ack wget
 
 # Add brew zsh to the shells file
 if grep -q "/usr/local/bin/zsh" /etc/shells; then
