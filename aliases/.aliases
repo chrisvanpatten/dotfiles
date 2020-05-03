@@ -17,7 +17,7 @@ alias gd="git diff"
 alias gm="git merge"
 
 # Gist script magic
-alias gist="gist -c"
+alias gist="gist -cp"
 
 # Vim alias
 alias v="vim"
