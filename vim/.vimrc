@@ -22,6 +22,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/bufkill.vim'
@@ -215,3 +217,21 @@ function! StripWhitespace ()
 	exec ':%s/ \+$//gc'
 endfunction
 map <Leader>s :call StripWhitespace ()<CR>
+
+" =========================
+" = Language Server Setup =
+" =========================
+
+" Psalm PHP server
+if executable('vendor/bin/psalm-language-server')
+	au User lsp_setup call lsp#register_server({
+		\ 'name': 'psalm-language-server',
+		\ 'cmd': {server_info->[expand('vendor/bin/psalm-language-server')]},
+		\ 'whitelist': ['php'],
+		\ })
+endif
+
+let g:lsp_signs_error = {'text': '●'}
+
+" Show hover information
+nmap <leader>w :LspHover<CR>
