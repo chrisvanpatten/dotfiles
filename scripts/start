@@ -4,7 +4,7 @@
 brew install zsh coreutils vim nvm php@7.3 tmux composer ack wget mas gist jq
 
 # Cask dependencies
-brew cask install typinator spotify alfred bartender diffmerge postman 1password 1password-cli
+brew cask install typinator spotify alfred bartender diffmerge postman 1password 1password-cli microsoft-teams
 
 # Add brew zsh to the shells file
 if grep -q "/usr/local/bin/zsh" /etc/shells; then

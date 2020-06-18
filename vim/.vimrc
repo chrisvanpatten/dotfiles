@@ -232,6 +232,7 @@ if executable('vendor/bin/psalm-language-server')
 endif
 
 let g:lsp_signs_error = {'text': '●'}
+let g:lsp_diagnostics_echo_cursor = 1
 
 " Show hover information
 nmap <leader>w :LspHover<CR>
