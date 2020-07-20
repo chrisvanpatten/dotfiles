@@ -1,9 +1,21 @@
 #!/bin/bash
 
+# Display dotfiles
 defaults write com.apple.finder AppleShowAllFiles YES
 
+# Global keyboard shortcuts
+defaults write NSGlobalDomain NSUserKeyEquivalents '{
+    "Select Next Conversation" = "@~\U2192";
+    "Select Previous Conversation" = "@~\U2190";
+    "Show Next Tab" = "@~\U2192";
+    "Show Previous Tab" = "@~\U2190";
+}'
+
+killall cfprefsd
+killall Finder
+
 # Basic dependencies
-brew install zsh coreutils vim nvm php@7.3 tmux composer ack wget mas gist jq
+brew install zsh coreutils vim node nvm php@7.3 tmux composer ack wget mas gist jq
 
 # Cask dependencies
 brew cask install typinator spotify alfred bartender diffmerge postman 1password 1password-cli microsoft-teams
