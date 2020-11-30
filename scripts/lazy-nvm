@@ -1,4 +1,4 @@
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+declare -a NODE_GLOBALS=(`find /usr/local/opt/nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 
 NODE_GLOBALS+=("node")
 NODE_GLOBALS+=("nvm")
