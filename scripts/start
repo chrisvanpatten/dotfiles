@@ -14,11 +14,11 @@ defaults write NSGlobalDomain NSUserKeyEquivalents '{
 killall cfprefsd
 killall Finder
 
-# Basic dependencies
-brew install zsh coreutils vim node nvm php@7.3 tmux composer ack wget mas gist jq
+# Add some custom files
+touch ~/.dotfiles/tmux/tmux.custom
 
-# Cask dependencies
-brew cask install typinator spotify alfred bartender diffmerge postman 1password 1password-cli microsoft-teams
+# Basic dependencies
+brew install zsh coreutils vim node nvm php@7.4 tmux composer ack wget mas gist jq
 
 # Add brew zsh to the shells file
 if grep -q "/usr/local/bin/zsh" /etc/shells; then

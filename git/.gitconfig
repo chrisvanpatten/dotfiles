@@ -18,6 +18,8 @@
 	diff =
 [push]
 	default = simple
+[pull]
+	rebase = false
 
 [color]
 	ui = auto
