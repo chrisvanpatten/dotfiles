@@ -6,3 +6,4 @@ ipfw.conf
 com.vanpattenmedia
 vim/.vim/autoload
 vim/.vim/plugins
+vim/.vim/coc-settings.json
