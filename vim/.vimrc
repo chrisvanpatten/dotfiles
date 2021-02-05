@@ -7,39 +7,45 @@ filetype off
 " = Plugins =
 " ===========
 
-" Set up vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Download vim-plug if not already available
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
+" Set up vim-plug
+set rtp+=~/.vim/autoload/plug.vim
+call plug#begin('~/.vim/plugins')
 
 " Plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ap/vim-buftabline'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/bufkill.vim'
-Plugin 'vim-vdebug/vdebug'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ap/vim-buftabline'
+Plug 'neoclide/coc.nvim'
+Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'godlygeek/tabular'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'myusuf3/numbers.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/bufkill.vim'
+Plug 'vim-vdebug/vdebug'
 
 " Syntaxes
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'jwalton512/vim-blade'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rodnaph/jinja.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'vim-ruby/vim-ruby'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'jwalton512/vim-blade'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rodnaph/jinja.vim'
+Plug 'tpope/vim-markdown'
+Plug 'vim-ruby/vim-ruby'
 
-call vundle#end()
+call plug#end()
 
 
 " ========================

@@ -4,5 +4,5 @@
 .netrwhist
 ipfw.conf
 com.vanpattenmedia
-vim/.vim/bundle/*
-!vim/.vim/bundle/vundle
+vim/.vim/autoload
+vim/.vim/plugins
