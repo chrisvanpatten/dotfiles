@@ -16,7 +16,6 @@ brew "git"
 brew "jq"
 brew "mas"
 brew "node"
-brew "nvm"
 brew "php@7.3"
 brew "php@7.4", link: true
 brew "the_silver_searcher"
