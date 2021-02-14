@@ -243,12 +243,6 @@ map <Leader>s :call StripWhitespace ()<CR>
 " Show hover information
 "nmap <leader>w :LspHover<CR>
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 " Always show signcolumn
 if has("patch-8.1.1564")
   set signcolumn=number
