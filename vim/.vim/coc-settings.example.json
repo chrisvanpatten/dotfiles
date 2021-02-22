@@ -1,3 +1,4 @@
 {
-	"intelephense.licenseKey": ""
+	"intelephense.licenseKey": "",
+	"suggest.noselect": false
 }
