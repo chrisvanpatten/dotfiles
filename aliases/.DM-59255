@@ -1,0 +1,29 @@
+kls()
+{
+	kubectl get pods -n "$1"
+}
+
+kpod()
+{
+	kls "$1" | grep team-cms -m 1 | sed -E 's/(team-cms-primary-.{8,10}-.{5}).*/\1/'
+}
+
+kssh()
+{
+	# If no container was selected, find one automatically
+	if [ -z "$2" ]; then
+		2=`kpod "$1"`
+	fi
+
+	kubectl -it -n "$1" exec "$2" -- /bin/bash
+}
+
+ktail()
+{
+	# If no container was selected, find one automatically
+	if [ -z "$2" ]; then
+		2=`kpod "$1"`
+	fi
+
+	kubectl -n "$1" logs -f "$2"
+}
