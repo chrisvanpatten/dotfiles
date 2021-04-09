@@ -224,31 +224,21 @@ function! StripWhitespace ()
 endfunction
 map <Leader>s :call StripWhitespace ()<CR>
 
-" =========================
-" = Language Server Setup =
-" =========================
-
-" Psalm PHP server
-"if executable('vendor/bin/psalm-language-server')
-"	au User lsp_setup call lsp#register_server({
-"		\ 'name': 'psalm-language-server',
-"		\ 'cmd': {server_info->[expand('vendor/bin/psalm-language-server')]},
-"		\ 'whitelist': ['php'],
-"		\ })
-"endif
-"
-"let g:lsp_signs_error = {'text': '●'}
-"let g:lsp_diagnostics_echo_cursor = 1
-
-" Show hover information
-"nmap <leader>w :LspHover<CR>
-
-" Always show signcolumn
-if has("patch-8.1.1564")
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
 " Faster update time
 set updatetime=300
+
+" Vdebug
+if !exists('g:vdebug_options')
+	let g:vdebug_options = {}
+endif
+let g:vdebug_options.path_maps = {"/var/www/html": "/Users/cvanpatten/code/nba-teams-cms"}
+let g:vdebug_options.break_on_open = 0
+
+" Default COC extensions
+let g:coc_global_extensions = [
+\ 'coc-git',
+\ 'coc-json',
+\ 'coc-phpls',
+\ 'coc-prettier',
+\ 'coc-psalm'
+\ ]
