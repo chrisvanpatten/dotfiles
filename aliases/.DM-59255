@@ -5,7 +5,7 @@ kls()
 
 kpod()
 {
-	kls "$1" | grep team-cms-primary -m 1 | sed -E 's/(team-cms-primary-.{8,10}-.{5}).*/\1/'
+	kls "$1" | grep teams-cms-primary -m 1 | sed -E 's/(teams-cms-primary-.{8,10}-.{5}).*/\1/'
 }
 
 kssh()
