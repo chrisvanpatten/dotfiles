@@ -33,6 +33,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/bufkill.vim'
+Plug 'vim-test/vim-test'
 Plug 'vim-vdebug/vdebug'
 
 " Syntaxes
@@ -157,6 +158,7 @@ set so=5           " Keep the cursor in the middle (ish)
 set showmatch      " Brackets/braces: highlight match
 set laststatus=0   " Disable statusline
 set colorcolumn=80 " Mark off column 80
+set guicursor=
 
 " solarized
 set background=dark
@@ -214,6 +216,7 @@ call togglebg#map("<leader>q")
 " @see https://unix.stackexchange.com/a/307974
 set backspace=indent,eol,start
 
+
 " =============
 " = Functions =
 " =============
@@ -227,12 +230,20 @@ map <Leader>s :call StripWhitespace ()<CR>
 " Faster update time
 set updatetime=300
 
+
+" ===========
+" = Plugins =
+" ===========
+
 " Vdebug
 if !exists('g:vdebug_options')
 	let g:vdebug_options = {}
 endif
 let g:vdebug_options.path_maps = {"/var/www/html": "/Users/cvanpatten/code/nba-teams-cms"}
-let g:vdebug_options.break_on_open = 0
+
+" Vim Test
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
 
 " Default COC extensions
 let g:coc_global_extensions = [
@@ -242,3 +253,21 @@ let g:coc_global_extensions = [
 \ 'coc-prettier',
 \ 'coc-psalm'
 \ ]
+
+let g:coc_disable_startup_warning = 1
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+nmap <leader>rn <Plug>(coc-rename)
+
+autocmd bufwritepost *.php silent !./vendor/bin/phpcbf -q % > /dev/null || true
+set autoread
