@@ -1,3 +1,8 @@
+kenv()
+{
+	kubectl config use-context nba-$1
+}
+
 kls()
 {
 	kubectl get pods -n "$1"
@@ -26,4 +31,9 @@ ktail()
 	fi
 
 	kubectl -n "$1" logs -f "$2"
+}
+
+ticketList()
+{
+	git log -n $1 | grep -oE '(TS-[0-9]{2,5})' | tr "\n" " " | pbcopy
 }
