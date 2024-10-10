@@ -42,6 +42,8 @@ Plug 'jwalton512/vim-blade'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'rodnaph/jinja.vim'
 Plug 'tpope/vim-markdown'
 Plug 'vim-ruby/vim-ruby'
@@ -58,7 +60,7 @@ let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeShowLineNumbers = 1
 let NERDTreeWinPos = "right"
-let NERDTreeIgnore = [ '\.DS_Store$', '\.sass-cache$', '\.vagrant$' ]
+let NERDTreeIgnore = [ '\.DS_Store$', '\.sass-cache$', '\.vagrant$', '\.next$' ]
 let NERDTreeCascadeSingleChildDir = 0
 let NERDTreeCascadeOpenSingleChildDir = 0
 let NERDTreeWinSize = 35
@@ -76,7 +78,7 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'vendor\|public/wp\|build\|public/assets\|node_modules\|platforms/ios\|tmp/cache\|.git\|.sass-cache\|.vagrant',
+  \ 'dir': 'vendor\|public/wp\|build\|public/assets\|node_modules\|platforms/ios\|tmp/cache\|.git\|.sass-cache\|.vagrant\|.next',
   \ }
 
 " numbers.vim
