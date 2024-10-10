@@ -47,3 +47,8 @@ ticketList()
 {
 	git log -n $1 | grep -oE '(TS-[0-9]{2,5})' | tr "\n" " "
 }
+
+backupAppleNotes()
+{
+	$HOME/code/notes-exporter/exportnotes.zsh --root-dir $HOME/Dropbox/Apps/AppleNotes --conda-env notesexport
+}
