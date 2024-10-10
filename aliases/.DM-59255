@@ -33,6 +33,16 @@ ktail()
 	kubectl -n "$1" logs -f "$2"
 }
 
+kdesc()
+{
+	# If no container was selected, find one automatically
+	if [ -z "$2" ]; then
+		2=`kpod "$1"`
+	fi
+
+	kubectl describe pod -n "$1" "$2"
+}
+
 ticketList()
 {
 	git log -n $1 | grep -oE '(TS-[0-9]{2,5})' | tr "\n" " "
