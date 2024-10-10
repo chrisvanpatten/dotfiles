@@ -4,6 +4,7 @@ DOTFILES="$HOME/.dotfiles"
 HOSTNAME="$(hostname)"
 
 # PATH
+PATH="/sbin:$PATH"
 PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
@@ -28,15 +29,8 @@ plugins=(
 export TERM=xterm-256color # 256 color terminal
 
 
-# rvm
-source $DOTFILES/scripts/lazy-rvm
-
 # nvm
 source $DOTFILES/scripts/lazy-nvm
-
-# php-version
-#source $(brew --prefix php-version)/php-version.sh && php-version 5
-
 
 # Go
 export GOPATH=$HOME/Websites/Projects/go
